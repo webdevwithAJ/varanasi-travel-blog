@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>FOODS</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* CSS Variables */
+    :root {
+        --navbar-height: 59px;
+    }
+
+    .head .log {
+        display: inline-block;
+
+        /* text-align: center; */
+        width: 100%;
+        /* border: 2px solid red; */
+        margin: 0px 0px;
+        padding: 15px 20px;
+
+    }
+
+    .head1 {
+
+        display: flex;
+
+        text-align: center;
+        width: 100%;
+        /* border: 2px solid red; */
+
+        background-color: #434343;
+        font-size: 3.5rem;
+        font-family: 'Baloo Bhai', cursive;
+        animation: animate 3s forwards;
+        opacity: 0.89;
+    }
+
+    .head1 p {
+        color: #a8e8a8;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 350px;
+    }
+
+    .head1 img {
+        text-align: left;
+        margin: 6px 39px;
+    }
+
+
+
+
+    /* Navigation Bar */
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: -1px;
+        background-color: #dedddd;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.77;
+    }
+
+    /* Navigation Bar: Logo and Image */
+    #logo {
+        margin: 10px 48px;
+    }
+
+    #logo img {
+        height: 59px;
+        margin: 3px -10px;
+    }
+
+
+    /* Navigation Bar: List Styling */
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    #navbar ul li a {
+
+        color: #a8e8a8;
+        display: block;
+        margin-left: 22px;
+        padding: 3px 40px;
+        border-radius: 15px;
+        text-decoration: wavy;
+
+    }
+
+    #navbar ul li a:hover {
+        transition: 1s;
+        color: black;
+        background-color: white;
+    }
+
+    #navbar ul input[type=text] {
+        float: right;
+        border: 2px solid gray;
+        border-radius: 20px;
+
+        padding: 0px 45px;
+        /* border: none; */
+        margin-top: 0px;
+        margin-right: 0px;
+        font-size: 16px;
+
+        color: black;
+        cursor: pointer;
+
+    }
+
+
+
+    #t {
+
+        border: 8px solid black;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .temple {
+
+        background-image: url("templeb1.jpg");
+        color: black;
+
+    }
+
+    .temple h1 {
+        opacity: 1.0;
+        font-family: 'Baloo Bhai', cursive;
+        margin-left: 120px;
+        padding-left: 325px;
+        padding-bottom: 25px;
+        text-decoration: underline;
+    }
+
+    .food p {
+        background-image: url("yumbg.jpg");
+    }
+
+
+
+    .food1 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food2 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food3 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food4 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food5 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food6 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food7 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food8 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    .food9 {
+
+        background-image: url("yumbg1.jpg");
+        color: black;
+    }
+
+    /* Footer */
+    .inner-footer {
+        margin: 0px;
+        padding: 0px;
+
+        background-color: #dddddd;
+    }
+
+    .social-links {
+        display: flex;
+    }
+
+    .social-links ul {
+        padding: 20px;
+        display: flex;
+        width: 300px;
+        height: 30px;
+        margin: auto;
+
+    }
+
+
+
+    .social-items {
+        display: flex;
+    }
+
+    .social-items {
+        list-style: none;
+    }
+
+    .social-items a {
+        padding: 10px 20px;
+        font-size: 35px;
+        /* color:#6cccc6 ; */
+        transition: all .25s;
+    }
+
+    .social-items a:hover {
+        color: #54ada8;
+    }
+
+    .quick-links {
+        display: flex;
+        width: 560px;
+        height: 70px;
+        margin: 60px 560px;
+    }
+
+    .quick-links ul {
+        display: flex;
+    }
+
+    .quick-items {
+        list-style: none;
+    }
+
+    .quick-items a {
+        text-decoration: none;
+        padding: 0px 15px;
+        font-size: 20px;
+        color: #052b28;
+        transition: all .25s;
+
+    }
+
+    .quick-items a:hover {
+        color: blue;
+
+    }
+
+    .outer-footer {
+        background-color: #dddddd;
+        margin-top: -59px;
+        padding: 10px;
+        text-align: center;
+        color: #6cccc6;
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="head1">
+            <img src="The Travel Blog-logos_edited1.jpg" alt="KashiBlog" width="100px" height="100px">
+            <p>
+                The Travel Blog
+
+            </p>
+        </div>
+
+    </header>
+    <hr>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="kashi_logos.jpg" alt="KashiBlog" width="100px" height="100px">
+        </div>
+        <ul>
+            <li class="itam"><a href="Page1.html" target="blank">Home</a></li>
+            <li class="itam"><a href="ghat.html" class="active">Ghats</a></li>
+            <li class="itam"><a href="temple.html">Temples</a></li>
+            <li class="itam"><a href="food.html">Food & Hotels</a></li>
+            <li class="itam"><a href="near.html">Near By Places</a></li>
+            <input type="text" placeholder="Search..">
+
+
+
+        </ul>
+
+
+    </nav>
+
+    <div class="temple" id="t">
+        <h1>Famous Street Foods in Varanasi</h1>
+
+
+        <p style="font-size: 150%;">Street food in Varanasi is as elaborate as the city's history. And Varanasi is as
+            old as
+            time itself. Since Aryan culture is found in the holy city, meat and beef is not that common and vegetarian
+            cuisine is mostly followed with some exceptions due to Muslim habitations. The food of Varanasi is
+            influenced by
+            nearby states including Bihar and West Bengal, which has been given a different flavour by the locals of the
+            city.
+
+            Unless one savours the culinary treats of Banaras, a trip is incomplete. Food is a quintessential part of
+            the
+            Varanasi's culture. Being frequented by hundreds of thousands of foreign tourists throughout the year, the
+            city's cuisine is a spin-off between the new and the old, the modern and the old-fashioned. A few handpicked
+            locations and special treats will tickle your taste buds while you're in Varanasi.
+
+            Here are some popular places for Varanasi street food that you must try if you ever visit the city: </p>
+
+    </div>
+
+
+
+    <div class="food">
+
+        <h1 style="text-align: center;">1. Kachori Sabzi</h1>
+        <P style="font-size: 30px;">Kachori Sabzi is the most popular breakfast dish in Varanasi. There are two
+            different types of Kachoris- Badi and Choti Kachori. While Badi Kachori is stuffed with a spicy mixture made
+            of lentils called Dal Ki Pithi, Choti Kachori is stuffed with a spicy mashed potato mix. The flavorful
+            Kachoris are served with a tangy and aromatic Aloo curry, which is made using a generous amount of cloves
+            and black pepper. Green chillies and dry red chillies have added the curry to make it hot and spicy.</P>
+        <img src="800px-Aloo_Puri,_typical_morning_snack,_Varanasi.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.7526505753453!2d83.00911581484776!3d25.312513183842718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e1ec336c637%3A0x265abb10d45f74e0!2sKachaudi%20Gali%2C%20Lahori%20Tola%2C%20Varanasi%2C%20Uttar%20Pradesh%20221001!5e0!3m2!1sen!2sin!4v1639334676965!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </ul>
+        <ul><b>Ram Bhandar</b></ul><br>
+        <b>
+            <ul>Thatheri Bazaar</ul>
+        </b><br>
+        <b>
+            <ul>Kachori Gali</ul><br>
+        </b>
+
+    </div>
+    <div class="food1">
+        <h1 style="text-align: center;">2. Choora Matar</h1>
+        <P style="font-size: 30px;">This street food is a Varanasi version of Maharashtrian Poha and Poha Chiwda of
+            Bihar. Made of flattened rice soaked in desi ghee and cooked with spices along with green peas, raisins and
+            saffron, Choora Matar is a famous breakfast and evening time snack in Varanasi. Spices like black pepper,
+            garam masala and hing are added to this dish to enhance its flavour. No onions are added to the mixture
+            which sets it apart from its Marathi and Bihari counterparts. Milk or cream is also added to the mix here to
+            enhance its texture and flavour. </P>
+        <img src="DSC_0180.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3606.6117578529024!2d83.016504!3d25.317245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x84d657202277008b!2sJatanbar%20Shree%20MahaprabhuJi%20Ki%20Baithak!5e0!3m2!1sen!2sin!4v1639406217495!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </ul>
+        <ul><b> Dashrat Egg & Chura Matar</b></ul><br>
+        <b>
+            <ul>Gopal Mandir Gali</ul>
+        </b><br>
+
+
+    </div>
+    <div class="food2">
+        <h1 style="text-align: center;">3. Dahi Chutney Gol Gappe</h1>
+        <P style="font-size: 30px;">Also popularly known as Meethe Golgappe, Dahi Chutney Gol Gappe is a sweet and spicy
+            delight which are loved
+            by children and adults alike. Wafer-thin, crisp Gol Gappas are filled with a spicy mixture of boiled
+            potatoes and then topped with tangy chutneys, curd flavoured with Imli, Pudina and other spices along with
+            sev. Pomegranate is also sprinkled as a final garnishment at some joints. Crispy and wholesome, these little
+            packets burst different flavours as soon as you put them in your mouth.</P>
+        <img src="S._P._D._P.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7213.718472786465!2d83.002266!3d25.308933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55cd387d275b3854!2sDeena%20Chaat%20Bhandar!5e0!3m2!1sen!2sin!4v1639406289728!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </ul>
+        <ul><b>Baati Chokha Restaurant</b></ul><br>
+        <b>
+            <ul>Deena Chaat Bhandar,Gol Ganj</ul>
+        </b><br>
+
+
+    </div>
+    <div class="food3">
+        <h1 style="text-align: center;">4. Baati Chokha</h1>
+        <P style="font-size: 30px;">Baati Chokha, a favourite delicacy in Bihar makes for a tasty street snack in
+            Varanasi too. Stuffed whole wheat dough balls are stuffed with roasted chana dal and spices inside. These
+            stuffed balls are known as Litties and are roasted over charcoal. Litties are dipped generously in desi ghee
+            and served with Chokha, which is made of a spicy mixture of boiled potatoes, tomato and eggplant. </p>
+        <img src="baati chokha.jpg" height="500" width="1500">
+
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57708.72511436524!2d82.986443!3d25.31108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4c0e7cb0b46f5a56!2sBaati%20Chokha%20Restaurant!5e0!3m2!1sen!2sin!4v1639406433352!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </ul>
+        <ul><b>BAATI CHOKA LANKA </b></ul><br>
+        <b>
+            <ul>Puran Das Road</ul>
+        </b><br>
+
+
+    </div>
+    <div class="food4">
+        <h1 style="text-align: center;">5. Tamatar Chaat</h1>
+        <P style="font-size: 30px;">
+            Tamatar Chaat is a local version of aloo chaat and is made from a mashed mixture of boiled potatoes,
+            tomatoes, onions, green chillies and fresh coriander leaves. This mouthwatering spicy chaat is too hot to
+            handle and is not for the faint-hearted. Spices like pounded ginger, red chilli powder and garam masala are
+            splashed into the dish making it deliciously fiery. It is served in a dona, a bowl made with palash leaves.
+        </P>
+        <img src="IMG_5919.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7213.718472786465!2d83.002266!3d25.308933!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x55cd387d275b3854!2sDeena%20Chaat%20Bhandar!5e0!3m2!1sen!2sin!4v1639406289728!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </ul>
+        <ul><b>Chatpat Restaurant</b></ul><br>
+        <b>
+            <ul>Deena Chaat Bhandar, Dashaswamedh Road</ul>
+        </b><br>
+
+
+    </div>
+    <div class="food5">
+        <h1 style="text-align: center;">6. Chena Dahi Vada</h1>
+        <P style="font-size: 30px;">
+        <P>Chena Dahi Vada is a sumptuous variation to the regular bhallas prepared using lentil. Similar to Rasmalai in
+            appearance, Chena Dahi Vada is usually served with sweet yoghurt sprinkled with a dash of Masala made of
+            jeera and black salt. These dahi vadas are served with a steaming cup of tea and are quite popular as a
+            breakfast item in Varanasi. The snack offers a perfect mix of sweet and sour flavours.</P>
+        <img src="Plateful_Dahi_Vadas.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7211.388076136408!2d83.01061!3d25.348046!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb840f0f04a7b417!2sShree%20Baba%20Vishwanath%20Sweets%20%26%20Restaurant!5e0!3m2!1sen!2sin!4v1639406555559!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </ul>
+        <ul><b> Chena Dahi Vada</b></ul><br>
+        <b>
+            <ul> Bikanervala - Indian Restaurant in Bhelupur, Varanasi</ul>
+        </b><br>
+        <ul><b> Baba vishvanath sweet house</b></ul><br>
+
+    </div>
+    <div class="food6">
+        <h1 style="text-align: center;">7. Thandai</h1>
+        <P style="font-size: 30px;">
+            Varanasi fairs high on the production of milk and curd and thus a profound use of these items can be found
+            in
+            most of the city's preparations. Banarasi Thandai is famous across India for its refreshing taste and
+            celebratory spirit. Made from seasonal fruit puree, Thandai is served in a kulhad topped with Rabri and
+            flavoured with rose essence, ice- cream, dry fruits and nuts. Condiments like fennel seeds, magaztari seeds,
+            pepper, vetiver seeds, cardamom and saffron make the flavours truly rich and refreshing. People add some
+            quantity of Bhang in Thandai on festive occasions like Holi. Thandai in Banaras is available with the kick
+            of bhang if you're up to try it. Bhang is a mix of dried leaves and buds of the female cannabis plant that
+            is consumed lovingly in 'Bhole Baba ki Nagri'! Baba Thandai and Thandai Ghar are two places to root for, at
+            Godowlia Chowk. These are the places to visit in Varanasi if you're craving for some fantastic thandai.</p>
+        <img src="Thandai.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.752650575339!2d83.00911581496418!3d25.31251318384264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e1ec336c637%3A0x265abb10d45f74e0!2sKachaudi%20Gali%2C%20Lahori%20Tola%2C%20Varanasi%2C%20Uttar%20Pradesh%20221001!5e0!3m2!1sen!2sin!4v1639297721431!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        </ul>
+        <ul><b>Blue Lassi Shop, Kachori Gali Chowk</b></ul><br>
+        <b>
+            <ul> Kashi Vishwanath Thandai Ghar.r</ul>
+        </b><br>
+        <b>
+            <ul> Deena Chaat Bhandar</ul><br>
+        </b>
+
+    </div>
+    <div class="food7">
+        <h1 style="text-align: center;">8. Paan</h1>
+        <P style="font-size: 30px;">
+            Banarasiya Paan is something that you must try when in Varanasi. Paan is made from beetle nut leaves with
+            beetle nuts or Supari, lime and a mixture of condiments and eaten with tobacco or lime. There is also the
+            Meetha Paan, a version of Paan, devoid of tobacco or lime but filled with sweetened rose petals, fennel
+            seeds and soft and chewy Supari. </P>
+        <img src="paann.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57709.743019238165!2d83.009409!3d25.308943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a36a2c524aed322!2sDeepak%20Tambul%20Bhandar!5e0!3m2!1sen!2sin!4v1639406617188!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </ul>
+        <ul><b>Rajendra Chaurasia Paan,</b></ul><br>
+        <b>
+            <ul>Chowk Thana and Deepak Tambul Bhandar</ul>
+        </b><br>
+        <b>
+            <ul>Dashashwamedh Ghat</ul><br>
+        </b>
+
+    </div>
+    <div class="food8">
+        <h1 style="text-align: center;">9. Malaiyyo - Famous Sweet of Banaras</h1>
+        <P style="font-size: 30px;">Makhan Malaiyyo or Nimish is a popular winter season street dessert in Varanasi.
+            Influenced by Persian cuisine, Malaiyyo is prepared by churning the milk slowly to create a creamy texture.
+            The milk foam is then flavoured with saffron and cardamoms and garnished with pistachios and almonds on the
+            top. Extraordinarily light and perfectly sweet, it is served in Purva or kulhads. Malayiyyo is a well-kept
+            secret of Varanasi, which one can only experience while visiting this eternal city.</P>
+        <img src="dsc_0170.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.609947840923!2d83.01322301448681!3d25.317305783031095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e228bd72941%3A0x5405397387f14522!2sGolghar%2C%20Ghasi%20Tola%2C%20Varanasi%2C%20Uttar%20Pradesh%20221001!5e0!3m2!1sen!2sin!4v1639236125378!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </ul>
+        <ul><b> Blue Lassi Shop,</b></ul><br>
+        <b>
+            <ul> Bikanervala - Indian Restaurant in Bhelupur</ul>
+        </b><br>
+        <b>
+            <ul>Neelkanth and Kachori Gali</ul><br>
+        </b>
+    </div>
+    <div class="food9">
+        <h1 style="text-align: center;">10. Rabri Jalebi</h1>
+        <P style="font-size: 30px;">Banaras is the king of Jalebis. The jalebis or imartis (a bigger cousin of the
+            Jalebi) are a sweet treat too
+            excellent to miss. Try them with rabri and you'll want to come back to Banaras for this one!
+        </P>
+        <img src="Jalebi-Rabdi.jpg" height="500" width="1500">
+        <ul>
+            <h3>where to eat;</h3>
+        </ul> <br>
+
+        <ul>
+            <h3>Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7215.202373591813!2d82.969325!3d25.283998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x819439704d3186ce!2sBengal%20Sweet%20House!5e0!3m2!1sen!2sin!4v1639406909143!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </ul>
+        <ul><b>Rashri,Bengal Sweet house,</b></ul><br>
+        <b>
+            <ul>Om Shree Ram Bhandar</ul>
+        </b><br>
+
+    </div>
+    <p style="font-size: 20px;"><B>IT'S NEVER ENOUGH TO KNOW THE FOOD IN VARNASI THAT FASCINATES ALL BECAUSE EACH
+            SHOP,EACH GALI,HAS IT'S OWN STORY AND TASTE...<BR><B><i>DO FOLLOW US ON DIFFERENT SOCIAL PLATFORMS TO STAY
+                    CONNECTED..</i></B>
+    </p>
+
+
+    <footer class="footer">
+        <div class="inner-footer">
+            <div class="social-links">
+                <ul>
+                    <li class="social-items"><a href="https://m.facebook.com/104571722076653/" target="blank"><i
+                                class="fab fa-facebook"></i></a></li>
+                    <li class="social-items"><a href="https://twitter.com/TravelVaranasi?t=kGUeXzdr3YJGnl6yjNmULA&s=08"
+                            target="blank"><i class="fab fa-twitter"></i></a></li>
+                    <li class="social-items"><a
+                            href="https://instagram.com/kashi_the_luminous_city?utm_medium=copy_link" target="blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li class="social-items"><a href="https://youtube.com/channel/UCE41_7ZSlgA_ZO7W9AR0Uiw"><i
+                                class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="quick-links">
+                <ul>
+                    <li class="quick-items"><a href="Page1.html">Home</a></li>
+                    <li class="quick-items"><a href="#services-container">Featuring</a></li>
+                    <li class="quick-items"><a href="#about Us">About Us</a></li>
+                    <li class="quick-items"><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <footer>
+            <div class="outer-footer">
+                | Copyright &copy; TTB !!! All Right Reserved |
+            </div>
+        </footer>
+
+
+
+</body>
+
+</html>

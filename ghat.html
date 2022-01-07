@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Ghats</title>
+</head>
+<style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+    html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+.head
+.log{
+    display: inline-block;
+    
+    /* text-align: center; */
+    width: 100%;
+    /* border: 2px solid red; */
+    margin: 0px 0px;
+    padding: 15px 20px;
+
+}
+
+.head1{
+
+    display: flex;
+    
+    text-align: center;
+    width: 100%;
+    /* border: 2px solid red; */
+    
+    background-color: #434343;
+    font-size: 3.5rem;
+    font-family: 'Baloo Bhai', cursive;
+    animation: animate 3s forwards;
+    opacity: 0.89;
+}
+.head1 p{
+    color: #a8e8a8;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 350px;
+}
+.head1 img{
+    text-align: left;
+    margin: 6px 39px;
+}
+
+
+
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -1px;
+    background-color: #dedddd;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.77;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 48px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px -10px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    
+    color: #a8e8a8;
+    display: block;
+    margin-left: 22px;
+    padding: 3px 40px;
+    border-radius: 15px;
+    text-decoration:wavy;
+
+}
+
+#navbar ul li a:hover{
+    transition: 1s;
+    color: black;
+    background-color:white;
+}
+#navbar ul input[type=text] {
+    float: right;
+    border: 2px solid gray;
+    border-radius: 20px;
+    
+    padding: 0px 45px;
+    /* border: none; */
+    margin-top: 0px;
+    margin-right: 0px;
+    font-size: 16px;
+    
+    color: black;
+    cursor: pointer;
+
+  }
+   /* Add a hover effect if you want */
+   .fa:hover {
+        opacity: 0.7;
+      }
+      
+      /* Set a specific color for each brand */
+      
+      /* Facebook */
+      .fa-linkedin {
+        background: #f4f6fa;
+        color: rgb(39, 142, 226);
+      }
+      
+      /* Twitter */
+      .fa-youtube {
+        background: #cb2027;
+        color: white;
+    }
+      .fa-facebook {
+        background: #206ccb;
+        color: white;
+    }
+      .fa-twitter {
+        background: #fefefe;
+        color: #2c6dbe;
+    }
+
+    
+   
+     
+    
+    .fa-instagram {
+        background:palevioletred;
+        color: white;
+   
+     
+    }
+  
+
+
+    .bm {
+    margin: 10px;
+    padding: 20px;
+    background-color:cornsilk  ;
+    font-family:cursive;
+    font-size:20px ;
+
+    color:black;
+    }
+    .bm h1{
+        
+        font-family: 'Baloo Bhai',cursive;
+    margin-left: 156px;
+    padding-left: 305px;
+    padding-bottom: 20px;
+    text-decoration: underline;
+         
+    }
+    .bm h3{
+        text-align: center;
+        font-size: 40px;
+        font-style:italic;
+        text-decoration-line: underline;
+        
+
+    }
+    .bm summary{
+        font-size: 40px;
+        font-style:italic;
+        text-decoration-line: underline;
+    }
+    .bm p4{
+        font-family:serif;
+    }
+    .bm img{
+        margin:2px ;
+        padding:1px;
+        width:100%;
+        height:450px;
+        image-orientation: flip;
+        animation-name: m;
+        animation-duration: 8s;
+         /* position:sticky; */
+         animation-iteration-count:4;
+
+    }
+
+
+    
+    .hm{
+        margin:0px;
+        padding: 0px;
+        display: flexbox;
+        background-color: rgb(31, 7, 7);
+    }
+    .only{
+            background-color: rgb(194 194 194 / 44%);;
+             border: 10px solid #2a404b;;
+            margin: 5px;
+            margin-right: -5px;
+            padding: 5px;
+            height: 300px;
+        }
+
+        /* Footer */
+        .inner-footer{
+    margin:0px;
+    padding: 0px;
+    
+    background-color: #dddddd;
+}
+.social-links{
+    display: flex;
+}
+.social-links ul{
+    padding: 20px;
+    display: flex;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    
+}
+.social-items{
+    display: flex;
+}
+.social-items{
+    list-style: none;
+}
+.social-items a{
+    padding: 10px 20px;
+    font-size: 35px;
+    /* color:#6cccc6 ; */
+    transition: all .25s;
+}
+.social-items a:hover{
+    color: #54ada8;
+}
+.quick-links{
+    display: flex;
+    width: 560px;
+    height: 70px;
+    margin: 60px 560px;
+}
+.quick-links ul{
+    display: flex;
+}
+.quick-items{
+    list-style: none;
+}
+.quick-items a{
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 20px;
+    color:#052b28;
+    transition: all .25s;
+    
+}
+.quick-items a:hover{
+    color: blue;
+
+}
+.outer-footer{
+    background-color: #dddddd;
+    margin-top: -59px;
+    padding: 10px;
+    text-align: center;
+    color: #6cccc6;
+    font-size: 18px;
+}
+
+
+    
+</style>
+<body>
+    <header>
+        <div class="head1">
+          <img src="The Travel Blog-logos_edited1.jpg" alt="KashiBlog" width="100px" height="100px">
+          <p>
+            The Travel Blog
+    
+          </p>
+        </div>
+    
+      </header>
+      <hr>
+      <nav id="navbar">
+        <div id="logo">
+          <img src="kashi_logos.jpg" alt="KashiBlog" width="100px" height="100px">
+        </div>
+        <ul>
+          <li class="itam"><a href="Page1.html" >Home</a></li>
+          <li class="itam"><a href="ghat.html" >Ghats</a></li>
+          <li class="itam"><a href="temple.html">Temples</a></li>
+          <li class="itam"><a href="food.html">Food & Hotels</a></li>
+          <li class="itam"><a href="near.html">Near By Places</a></li>
+          <input type="text" placeholder="Search..">
+    
+    
+    
+        </ul>
+    
+    
+      </nav>
+      
+   
+    <div class=bm>
+    <h1>GHATS IN VARANASI</h1>
+    
+   <p1>Ghats in Varanasi are riverfront steps leading to the banks of the River Ganges. The city has 88 ghats. Most of the ghats are bathing and puja ceremony ghats, while two ghats, Manikarnika and Harishchandra, are used exclusively as cremation sites.[1]
+
+    Most Varanasi ghats were rebuilt in the 18th century under the maratha patronage. The patrons of current ghats are Marathas, Shindes (Scindias), Holkars, Bhonsles, and Peshwes (Peshwas).Maharajas of Benares. Many ghats are associated with legends or mythologies while many ghats are privately owned. Morning boat ride on the Ganges across the ghats is a popular visitor attraction.</p1>
+    <H2>Etymology</H2>
+    <p2>The word ghat is explained by numerous Dravidian etymons such as Kannada gatta (mountain range) Tamil kattu (side of a mountain, dam, ridge, causeway) and Telugu katta and gattu (dam, embankment).[2]
+
+        Ghat, a term used in the Indian subcontinent, depending on the context could either refer to a range of stepped-hill such as Eastern Ghats and Western Ghats; or the series of steps leading down to a body of water or wharf, such bathing or cremation place along the banks of a river or pond, Ghats in Varanasi, Dhoby Ghaut or Aapravasi Ghat.[3][4] Roads passing through ghats are called Ghat Roads.</p2>
+        <details>
+            <summary> Popular ghat </summary>
+            <p3>According to the puranic sources, there are five key ghats on the riverfront, important because of their association with a defining feature of the holy city of Kashi: Assi Ghat, Dashashwamedh Ghat, Manikarnika Ghat, Panchganga Ghat, Rajendra Prasad Ghat, Adi Keshav Ghat.[5] </p3>
+        </details>      
+        
+        <h3>Assi ghat</h3>
+        <img src="assi2.JPG" alt="">
+           <p4>This ghat that used to lie at the confluence of the Ganges with the dry river Asi marks the traditional southern boundary of the city. Asisangameshwar Temple at the ghat finds mention in the Kashi Khand of Skandmahapuran. This ghat is very popular because it is one of the very few ghats that is linked with the city through a wide street. It is also the major ghat that is closest to Banaras Hindu University. Assi ghat name is derived from the river Assi.</p4>
+           <div class=only>
+           <h2>Speciality</h2> 
+          <li>A early morning Ganga Aarti before sunrise accompanied by shlokas and havan is definitely a divine experience.</li>
+          <li>Assi ghat has an aarti in the morning and evening</li>
+          <li>The early morning ceremony and yoga class is recommended. known as subha banaras</li>
+          <li> MUST try the lemon tea sold by little boys and get a shock by asking the recipe</li>
+         </div>
+          <h3>Dashashwamedh Ghat</h3>
+          <p4>Dashashwamedh Ghat is located close to Vishwanath Temple, and is probably the most spectacular ghat. Two Hindu mythologies are associated with it: According to one, Lord Brahma created it to welcome Lord Shiva. According to another, Lord Brahma sacrificed ten horses, during Dasa-Ashwamedha yajna performed here. A group of priests daily perform in the evening at this ghat "Agni Pooja" (Worship to Fire) wherein a dedication is made to Lord Shiva,Ganges.</p4>
+        <img src="ghat4.jpg">
+        <div class=only>
+        <h2>Speciality</h2> 
+            <li>Dashashwamedh ghat is famous for great event named Gange Aarti at each evening after sunset.</li>
+            <li> Some people including tourist are love to see the aarti event by sitting in a boat in the river.</li>
+            <li> maha Gange aarti held at the ghat at Kartik Purnima which attracts an unbelievable crowd.</li>
+        </div>
+            <h3>Manikarnika ghat</h3>
+        <p4> Two legends are associated with Manikarnika Ghat.[7] According to one, it is believed to be the place where Lord Vishnu dug a pit with his Chakra and filled it with his perspiration while performing various penances. While Lord Shiva was watching Lord Vishnu at that time, the latter's earring ("Manikarnika") fell into the pit. According to the second legend, to keep Lord Shiva from moving around with his devotees, his consort Goddess Parvati hid her earrings and asked him to find them, saying that they had been lost on the banks of the Ganges. Goddess Parvati's idea behind the fib was that Lord Shiva would then stay around, searching forever for the lost earrings. In this legend, whenever a body gets cremated at the Manikarnika Ghat, Lord Shiva asks the soul whether it has seen the earrings.
+            
+            According to ancient texts, the owner of Manikarnika Ghat bought King Harishchandra as a slave and made him work on the Manikarnika at Harishchandra Ghat. Hindu cremations customarily take place here, though a majority of dead bodies are taken for cremation to the Manikarnika Ghat.</p4>
+         <img src="manikarnika.jpg">
+         <div class=only>
+         <h2>Speciality</h2> 
+         <li>The Manikarnika shrine is an important place of worship for Shaktism sect of Hinduism, It is near to the Kashi Vishwanath Temple.</li>
+         <li>
+
+            Mourners carrying a body
+            Hindu mythology teaches that the ghat is especially sacred and that people cremated there receive moksha</li>
+            <li>The well at the ghat is called Manikarnika Kund and was built by Lord Vishnu.[6]</li>
+        </div>
+
+         <h3>Raj Ghat</h3>   
+        <p4>Situated near to Kashi railway station, this is one of the famous ghats of Varanasi. This is next to the Raj Ghat bridge. Famous Ravidas temple is located on this ghat. It is also famous for Pind Daan and asthi-visarjan. Famous priests of Kashi are based here. The ghats can easily be accessed through any kind of vehicles and parking facilities are also available here. This ghat is also friendly for disabled people who can not walk through narrow lanes of Kashi. 
+
+        </p4>
+        <img src=ganga.jpg widht="100%" height="70%">
+        <h3>Scindia Ghat</h3>
+        <p4>Also known as Shinde Ghat borders Manikarnika to the north, with its Shiva temple lying partially submerged in the river as a result of excessive weight of the ghat's construction about 150 years ago. Above the ghat, several of Kashi's most influential shrines are located within the tight maze of alleys of Siddha Kshetra (Field of Fulfillment). According to tradition, Agni, the Hindu God of Fire was born here. Hindu devotees propitiate at this place Vireshwara, the Lord of all heroes, for a son.</p4>    
+        <h3>Maan-Mandir Ghat</h3>
+        <p4>Mana-Mandir Ghat: Maharaja Jai Singh II of Jaipur built this Ghat in 1770, as well as the Jantar Mantar equipped with ornate window casings along with those at Delhi, Jaipur, Ujjain, and Mathura. There is a fine stone balcony in the northern part of the ghat. </p4>
+        <img src="h_edited.jpg" widht="100%" height="50%">
+        <div class=only>
+        <h2>speciality</h2>
+        <li>The Man Mandir Ghat is also dotted with several Hindu temples including Rameshwara Temple</li>
+        <li> Visitors can be seen relaxing and enjoying the views offered by the ghat.</li>
+        </div> 
+        <h2>Why You Should Do A Varanasi Boat Ride ?</h2> 
+         <p3>A Varanasi boat ride is the best way to experience Varanasi. If there’s one thing you have to do in the holiest city in India, it’s this.</p3>
+          <p3>Early in the morning, before the first rays of sunlight have painted the sky, the boatmen of Varanasi walk to their rowboats at the banks of River Ganges. In short time, the ghats will be crowded by locals and pilgrims performing their morning prayer (puja), brushing their teeth and bathing in the holy Hindu river.</p3>
+           <img src="boat1.jpg" >     
+           <div class=only>
+           <h3>Important tips for the boat ride</h3>
+          <li>When: You can do a boat ride from very early morning until Ganga Aarti that takes place by sunset. The boat rides cost more at sunrise and sunset. The best time to do a boat ride is in the morning.</li>
+         <li>Where: There are more than 100 ghats in Varanasi, and you can find a boat man for hire in almost all of them. The smaller ghats have less boats than the popular ones such as Assi ghat</li>
+         <li>What: You can hire a motor boat or a traditional rowing boat, which is controlled by a boatman. They carry up to six people. Never enter a rowing boat with more than 6 people! It’s not safe.</li>
+        </div>
+         <h2>The First Luxury Cruise in Varanasi</h2>
+          <li> On "nordic Cruise line" book your ride</li>
+          <li> The cruise route of Alaknanda Varanasi cruise service will start from Assi Ghat and continue all the way to Panchganga Ghat. In doing so, it will cover a distance of around 12 km. </li> 
+          <li>You can board the Alaknanda cruise in Varanasi from the following boarding points:  Alaknanda Jetty, Ravidas Park Ghat Nagwa.</li>
+          <li>The cruise fare onboard the Alakananda Varanasi Cruise is 750 INR, which also includes the GST </li>
+         <li>the morning cruise is available from 7:00 AM to 8:30 AM, the evening cruise is available from 6:00 PM to 8:30 PM.</li>   
+          <img src="alaknanda.png" height="10%">
+        </div>
+    
+
+    <footer class="footer">
+        <div class="inner-footer">
+          <div class="social-links">
+            <ul>
+              <li class="social-items"><a href="https://m.facebook.com/104571722076653/" target="blank"><i
+                    class="fab fa-facebook"></i></a></li>
+              <li class="social-items"><a href="https://twitter.com/TravelVaranasi?t=kGUeXzdr3YJGnl6yjNmULA&s=08"
+                  target="blank"><i class="fab fa-twitter"></i></a></li>
+              <li class="social-items"><a href="https://instagram.com/kashi_the_luminous_city?utm_medium=copy_link"
+                  target="blank"><i class="fab fa-instagram"></i></a></li>
+              <li class="social-items"><a href="https://youtube.com/channel/UCE41_7ZSlgA_ZO7W9AR0Uiw"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+          <div class="quick-links">
+            <ul>
+              <li class="quick-items"><a href="Page1.html">Home</a></li>
+              <li class="quick-items"><a href="#services-container">Featuring</a></li>
+              <li class="quick-items"><a href="#about Us">About Us</a></li>
+              <li class="quick-items"><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+    
+        </div>
+        <footer>
+         <div class="outer-footer">
+          | Copyright &copy; TTB !!! All Right Reserved |
+        </div>
+      </footer> 
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Foods & Hotels</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* CSS Variables */
+    :root {
+        --navbar-height: 59px;
+    }
+
+    .head .log {
+        display: inline-block;
+
+        /* text-align: center; */
+        width: 100%;
+        /* border: 2px solid red; */
+        margin: 0px 0px;
+        padding: 15px 20px;
+
+    }
+
+    .head1 {
+
+        display: flex;
+
+        text-align: center;
+        width: 100%;
+        /* border: 2px solid red; */
+
+        background-color: #434343;
+        font-size: 3.5rem;
+        font-family: 'Baloo Bhai', cursive;
+        animation: animate 3s forwards;
+        opacity: 0.89;
+    }
+
+    .head1 p {
+        color: #a8e8a8;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 350px;
+    }
+
+    .head1 img {
+        text-align: left;
+        margin: 6px 39px;
+    }
+
+
+
+
+    /* Navigation Bar */
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: -1px;
+        background-color: #dedddd;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.77;
+    }
+
+    /* Navigation Bar: Logo and Image */
+    #logo {
+        margin: 10px 48px;
+    }
+
+    #logo img {
+        height: 59px;
+        margin: 3px -10px;
+    }
+
+
+    /* Navigation Bar: List Styling */
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    #navbar ul li a {
+
+        color: #a8e8a8;
+        display: block;
+        margin-left: 22px;
+        padding: 3px 40px;
+        border-radius: 15px;
+        text-decoration: wavy;
+
+    }
+
+    #navbar ul li a:hover {
+        transition: 1s;
+        color: black;
+        background-color: white;
+    }
+
+    #navbar ul input[type=text] {
+        float: right;
+        border: 2px solid gray;
+        border-radius: 20px;
+
+        padding: 0px 45px;
+        /* border: none; */
+        margin-top: 0px;
+        margin-right: 0px;
+        font-size: 16px;
+
+        color: black;
+        cursor: pointer;
+
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-linkedin {
+        background: #f4f6fa;
+        color: rgb(39, 142, 226);
+    }
+
+    /* Twitter */
+    .fa-youtube {
+        background: #cb2027;
+        color: white;
+    }
+
+    .fa-facebook {
+        background: #206ccb;
+        color: white;
+    }
+
+    .fa-twitter {
+        background: #fefefe;
+        color: #2c6dbe;
+    }
+
+
+
+
+
+    .fa-instagram {
+        background: palevioletred;
+        color: white;
+
+
+    }
+
+
+
+    .bm {
+        margin: 10px;
+        padding: 20px;
+        background-color: white;
+        font-family: cursive;
+        font-size: 20px;
+
+        color: black;
+    }
+
+    .bm h1 {
+        font-family: 'Baloo Bhai';
+        text-align: center;
+        text-decoration-line: underline;
+        margin-top: 50px;
+
+
+    }
+
+    .bm h3 {
+        text-align: center;
+        font-size: 40px;
+        font-style: italic;
+        text-decoration-line: underline;
+
+    }
+
+    .bm img {
+        margin-top: 25px;
+        width: 100%;
+        height: 450px;
+
+    }
+
+    .box {
+
+        background-color: white;
+        height: 300px;
+        color: black;
+
+        display: flex;
+        width: 100%;
+        padding: 1px;
+        border: 2px solid white;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+        line-height: normal;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        font-family: Emilys Candy;
+        color: #e0d9d9;
+
+
+
+
+    }
+
+    .bx {
+        background-color: white;
+        height: 300px;
+        color: black;
+
+        display: flex;
+        width: 100%;
+        padding: 1px;
+        border: 2px solid white;
+        margin: 5px auto;
+        margin-bottom: 20px;
+        font-size: 25px;
+        border-radius: 0px;
+        line-height: normal;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        font-family: Emilys Candy;
+        color: #e0d9d9;
+
+
+
+    }
+
+    .box h2 {
+        color: rgb(14, 11, 11);
+        font-size: 24px;
+        font-family: Emilys Candy;
+        left: 20px;
+    }
+
+    #last-2 {
+        padding-left: 50px;
+
+    }
+
+    .last {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 45%;
+        overscroll-behavior-block: set;
+        height: 300px;
+        background-color: white;
+        border: 5px solid white;
+        margin: 5px;
+        padding: 2px;
+        margin-left: 10px;
+        font-family: Emilys Candy;
+        color: rgb(0, 7, 12);
+        font-size: 16px;
+        background: transparent;
+
+        /* position: relative; */
+    }
+
+    .last li {
+        font-size: 35px;
+        margin-top: 30px;
+    }
+
+    .last h2 {
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+    .container1 {
+        height: 650px;
+        width: 100%;
+        background-color: white border=20px solid white;
+        display: flex;
+        box-shadow: 740px;
+    }
+
+    .item {
+        font-family: 'Baloo Bhai', cursive;
+        width: 400px;
+        overscroll-behavior-block: set;
+        height: 500px;
+        background-color: rgb(251, 180, 46);
+        border: 12px solid white;
+        ;
+        margin: 5px;
+        padding: 2px;
+        font-family: Emilys Candy;
+        color: rgb(0, 7, 12);
+        font-size: 16px;
+        animation-name: move;
+        animation-duration: 10s;
+        /* position: relative; */
+        animation-iteration-count: 4;
+        background: transparent;
+        box-shadow: gray;
+        text-align: center;
+
+
+
+
+    }
+
+    @keyframes r {
+        0% {
+            right: 0px;
+            left: 810px;
+
+        }
+
+        50% {
+            right: 410px;
+            left: 410px
+        }
+
+        100% {
+            right: 810px;
+            left: 0px;
+        }
+    }
+
+    .bx a img {
+        margin-top: 25px;
+        width: 70%;
+        height: 172px;
+
+
+    }
+
+
+    .box a img {
+        margin-top: 25px;
+        width: 70%;
+        height: 200px
+    }
+
+    /* Footer */
+
+    .inner-footer {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 30px;
+
+        background-color: #dddddd;
+    }
+
+    .social-links {
+        display: flex;
+    }
+
+    .social-links ul {
+        padding: 20px;
+        display: flex;
+        width: 300px;
+        height: 30px;
+        margin: auto;
+
+    }
+
+    .social-items {
+        display: flex;
+    }
+
+    .social-items {
+        list-style: none;
+    }
+
+    .social-items a {
+        padding: 10px 20px;
+        font-size: 35px;
+        /* color:#6cccc6 ; */
+        transition: all .25s;
+    }
+
+    .social-items a:hover {
+        color: #54ada8;
+    }
+
+    .quick-links {
+        display: flex;
+        width: 560px;
+        height: 70px;
+        margin: 60px 560px;
+    }
+
+    .quick-links ul {
+        display: flex;
+    }
+
+    .quick-items {
+        list-style: none;
+    }
+
+    .quick-items a {
+        text-decoration: none;
+        padding: 0px 15px;
+        font-size: 20px;
+        color: #052b28;
+        transition: all .25s;
+
+    }
+
+    .quick-items a:hover {
+        color: blue;
+
+    }
+
+    .outer-footer {
+        background-color: #dddddd;
+        margin-top: -59px;
+        padding: 10px;
+        text-align: center;
+        color: #6cccc6;
+        font-size: 18px;
+    }
+</style>
+
+
+<body>
+    <header>
+        <div class="head1">
+            <img src="The Travel Blog-logos_edited1.jpg" alt="KashiBlog" width="100px" height="100px">
+            <p>
+                The Travel Blog
+
+            </p>
+        </div>
+
+    </header>
+    <hr>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="kashi_logos.jpg" alt="KashiBlog" width="100px" height="100px">
+        </div>
+        <ul>
+            <li class="itam"><a href="Page1.html">Home</a></li>
+            <li class="itam"><a href="ghat.html" target="blank" class="active">Ghats</a></li>
+            <li class="itam"><a href="temple.html">Temples</a></li>
+            <li class="itam"><a href="food.html">Food & Hotels</a></li>
+            <li class="itam"><a href="near.html">Near By Places</a></li>
+            <input type="text" placeholder="Search..">
+
+
+
+        </ul>
+
+
+    </nav>
+    <div class="bm">
+        <h1>Best Foods to Have in Varanasi</h1>
+        <img src="streetfood.webp">
+        <p3>Street food in Varanasi is as elaborate as the city's history. And Varanasi is as old as time itself. Since
+            Aryan culture is found in the holy city, meat and beef is not that common and vegetarian cuisine is mostly
+            followed with some exceptions due to Muslim habitations. The food of Varanasi is influenced by nearby states
+            including Bihar and West Bengal, which has been given a different flavour by the locals of the city. Unless
+            one savours the culinary treats of Banaras, a trip is incomplete. Food is a quintessential part of the
+            Varanasi's culture. Being frequented by hundreds of thousands of foreign tourists throughout the year, the
+            city's cuisine is a spin-off between the new and the old, the modern and the old-fashioned. A few handpicked
+            locations and special treats will tickle your taste buds while you're in Varanasi. Here are some popular
+            places for Varanasi street food that you must try if you ever visit the city</p3>
+
+        <h1>1. Makhan Toast</h1>
+        <img src="chaitoast.jpeg" alt="" width="100%" height="50%">
+        <p1> A very interesting food in Varanasi is the Safed Makhan Toast, which is essentially local bread that has
+            been
+            slathered over with ‘Makhan’ or butter. First, the bread is roasted over a coal oven and then it is covered
+            by a thick layer of white or yellow butter. The butter is freshly made and thick in consistency. You can
+            have sugar added to it or have it salty. The chai or tea concocted in this restaurant is like God’s gift
+            to you. The uncle- ji who prepares this broth does his job with love and care and what you get is a thick
+            tea that smells divine. We are sure that you will never be satisfied with just one helping of your toast and
+            tea. </p1>
+        <div class="box">
+
+            <div class="last" id="last-1">
+
+
+                <h2>PLACES TO EAT </h2>
+                <li>Laxmi Chai Waley</li>
+                <li>Chowk </li>
+                <li>Godowlia</li>
+            </div>
+            <div class="last" id="last-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.7149064442633!2d83.00894221484783!3d25.313780883842142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e192d7cd2db%3A0xaa6e6c157ab1e71b!2sLakshmi%20Chai%20Wala!5e0!3m2!1sen!2sin!4v1640588330189!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <h1>2.Kachori Jalebi</h1>
+        <img src="kachori_jalebi.jpeg" alt="" width="100%" height="50%">
+        <p1>Banaras is the king of Jalebis. The jalebis or imartis (a bigger cousin of the Jalebi) are a sweet treat
+            too excellent to miss. Try them with rabri and you'll want to come back to Banaras for this one!
+            Visting Varanasi and never eating this lipsmacking food must be the biggest regret of your life.
+            Also one should try it with Rabri.
+        </p1>
+
+        <div class="box">
+
+            <div class="last" id="last-1">
+
+                <h2>PLACES TO EAT:</h2>
+                <li>Vishwanath Misthan Bhandaar</li>
+                <li>Ram Bhandaar</li>
+            </div>
+
+
+            <div class="last" id="last-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.8745112440774!2d82.99705431484772!3d25.308419883844582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e021984d01d%3A0x1c228befed9c6578!2sVishwanath%20Misthan%20Bhandar!5e0!3m2!1sen!2sin!4v1639323168362!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <h1>3.Banarasi Chaat</h1>
+        <img src="golgaape.webp" alt="" width="100%" height="50%">
+        <p>Banarasi chaat is a different types of appetizer including GolGappe,Aloo Tikki,Tamatar Chaat ,etc. are
+            the
+            sweet and spicy delight which are loved
+            by children and adults alike. Wafer-thin, crisp Gol Gappas are filled with a spicy mixture of boiled
+            potatoes and pulses and then topped with paani and other spices.</p>
+
+        <div class="box">
+
+
+            <div class="last" id="last-1">
+
+                <h2>PLACES TO EAT:</h2>
+                <li>Keshari Chaat corner</li>
+                <li>Deena Chaat Bhandar</li>
+                <li>Golghar</li>
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.8590925082467!2d83.00007751448663!3d25.308937833369953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e02ea4baf71%3A0x55cd387d275b3854!2sDeena%20Chaat%20Bhandar!5e0!3m2!1sen!2sin!4v1639234866521!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <h1>4.Paan</h1>
+        <img src="paan.jpeg">
+        <p>.
+            BanarasiyaPaan is something that you must try when in Varanasi. Paan is made from beetle nut leaves with
+            beetle nuts or Supari, lime and a mixture of condiments and eaten with tobacco or lime. There is also
+            the
+            Meetha Paan, a version of Paan, devoid of tobacco or lime but filled with sweetened rose petals, fennel
+            seeds and soft and chewy Supari.
+
+        </p>
+        <div class="box">
+
+
+            <div class="last" id="last-1">
+
+                <h2>PLACES TO EAT:</h2>
+
+                <li>Ravidas Gate</li>
+                <li>Rajendra Chaurasia Paan</li>
+                <li> Deepak Tambul Bhandar</li>
+                <li>Dashashwamedh Ghat</li>
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.603054588373!2d82.9951096144875!3d25.35109773166156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2fbc9ce12503%3A0x65ed7d04e6670fd8!2sBanarasi%20paan!5e0!3m2!1sen!2sin!4v1639236835468!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <h1>5.BAATI CHOKA</h1>
+        <img src="baat.jpeg">
+        <p>BaatiChokha, a favourite delicacy in Bihar makes for a tasty street snack in Varanasi too. Stuffed whole
+            wheat dough balls are stuffed with roasted chana dal and spices inside. These stuffed balls are known as
+            Litties and are roasted over charcoal. Litties are dipped generously in desi ghee and served with
+            Chokha,
+            which is made of a spicy mixture of boiled potatoes, tomato and eggplant</p>
+        <div class="box">
+
+
+            <div class="last" id="last-1">
+
+                <h2>PLACES TO EAT:</h2>
+                <li>Baati Choka Lanka</li>
+                <li>Puran Das Road</li>
+
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28854.353587202273!2d82.96893335018173!3d25.311117661827367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2df940000001%3A0x4c0e7cb0b46f5a56!2sBaati%20Chokha%20Restaurant!5e0!3m2!1sen!2sin!4v1639235399298!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+
+        </div>
+        <h1>6.Malaiyyo - Famous Sweet of Banaras</h1>
+        <img src="malo.jpg">
+        <p>Makhan Malaiyyo or Nimish is a popular winter season street dessert in Varanasi. Influenced by Persian
+            cuisine, Malaiyyo is prepared by churning the milk slowly to create a creamy texture. The milk foam is
+            then
+            flavoured with saffron and cardamoms and garnished with pistachios and almonds on the top.
+            Extraordinarily
+            light and perfectly sweet, it is served in Purva or kulhads. Malayiyyo is a well-kept secret of
+            Varanasi,
+            which one can only experience while visiting this eternal city</p>
+        <div class="box">
+
+
+            <div class="last" id="last-1">
+
+                <h2>PLACES TO EAT:</h2>
+                <li>Chowkambha</li>
+                <li>Kachori Galli</li>
+                <li>Golghar</li>
+
+
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.609947840923!2d83.01322301448681!3d25.317305783031095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e228bd72941%3A0x5405397387f14522!2sGolghar%2C%20Ghasi%20Tola%2C%20Varanasi%2C%20Uttar%20Pradesh%20221001!5e0!3m2!1sen!2sin!4v1639236125378!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+        </div>
+        <h1>7.Thandai</h1>
+        <img src="thandai.jpeg">
+        <p>Varanasi fairs high on the production of milk and curd and thus a profound use of these items can be
+            found in
+            most of the city's preparations. BanarasiThandai is famous across India for its refreshing taste and
+            celebratory spirit. Made from seasonal fruit puree, Thandai is served in a kulhad topped with Rabri and
+            flavoured with rose essence, ice- cream, dry fruits and nuts. Condiments like fennel seeds, magaztari
+            seeds,
+            pepper, vetiver seeds, cardamom and saffron make the flavours truly rich and refreshing. People add some
+            quantity of Bhang in Thandai on festive occasions like Holi. Thandai in Banaras is available with the
+            kick
+            of bhang if you're up to try it. Bhang is a mix of dried leaves and buds of the female cannabis plant
+            that
+            is consumed lovingly in 'Bhole Baba ki Nagri'! Baba Thandai and Thandai Ghar are two places to root for,
+            at
+            Godowlia Chowk. These are the places to visit in Varanasi if you're craving for some fantastic thandai.
+        </p>
+        <div class="box">
+
+
+            <div class="last" id="last-1">
+
+                <h2>PLACES TO EAT:</h2>
+                <li> Blue Lassi Shop</li>
+                <li>Varanasi Thandai Ghar</li>
+                <li> Kachauri Gali</li>
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.758356571219!2d83.00928391448669!3d25.31232153323294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e1edccc4ee1%3A0x75201798f943ce7!2sBlue%20Lassi%20Shop!5e0!3m2!1sen!2sin!4v1639237322350!5m2!1sen!2sin"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+        </div>
+
+
+        <h1>Famous Franchises in Varanasi</h1>
+
+        <div class="bx">
+
+            <div class="item" id="item 1">
+                <h1>Burger king</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://goo.gl/maps/RKyS7FJ233s6Rhkr9" target="blank"><img src="burger.webp" width="20%"
+                        height="10%"></a>
+
+            </div>
+            <div class="item" id="item 2">
+                <h1>Dominos</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://goo.gl/maps/KFDqRhySFMouPkV87" target="blank"><img src="do.png" width="20%"
+                        height="10%"></a>
+            </div>
+            <div class="item" id="item 3">
+                <h1>KFC</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://goo.gl/maps/RKyS7FJ233s6Rhkr9" target="blank"><img src="Kfc_logo.png" width="20%"
+                        height="10%"></a>
+            </div>
+            <div class="item" id="item 4">
+                <h1>Sagar Ratna</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://g.page/sagarratnavaranasi?share" target="blank"><img src="sa.jpg" width="20%"
+                        height="10%"></a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="item" id="item 1">
+                <h1>Pizza Hut</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://goo.gl/maps/cUf2pAJ5vyyw8RMKA" target="blank"><img src="pi.jpg" width="50%"
+                        height="50%"></a>
+            </div>
+            <div class="item" id="item 2">
+                <h1>McDonalds</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://goo.gl/maps/mjAyAkK2PAE1Bkqf7" target="blank"><img src="mcd.png"></a>
+            </div>
+            <div class="item" id="item 3">
+                <h1>Subway</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://g.page/subway-varanasi?share" target="blank"><img src="subway.jpg"></a>
+            </div>
+            <div class="item" id="item 4">
+                <h1>Bikanerwala</h1>
+                <!-- <li> For add click in picture</li> -->
+                <a href="https://goo.gl/maps/iMQixLXqGjQdRN4t6" target="blank"><img src="bika.png"></a>
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+        <h1>Luxury Hotels in Varanasi</h1>
+        <div class="bx">
+
+
+            <div class="last" id="last-1">
+                <h1> BrijRama Palace</h1>
+                BrijRama Palace, which stands mighty on the serene banks of Darbhanga Ghat, is one of the oldest
+                man-made structures in the city and is considered to be a top-tier luxury hotel in Varanasi
+                <a href="https://goo.gl/maps/r4nnfHeaKtyMTUoV6" target="blank"><img src="bj.jpg"></a>
+
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <h1>Taj Nadesar Palace</h1>
+                Overlooking the Ganges River and surrounded by vibrant gardens, this palatial hotel in a property
+                dating
+                from 1835 is 4 km from Vishalakshi Temple and 9 km from the Dhamek Stupa monument.
+                <a href="https://goo.gl/maps/cVrJxvXgWktbfYw27" target="blank"><img src="taj.webp"></a>
+
+            </div>
+
+        </div>
+
+
+        <div class="bx">
+
+
+            <div class="last" id="last-1">
+                <h1> Taj Ganges</h1>
+                Occupying a grand building on 40 acres of landscaped gardens, this upscale hotel is 2 km from the
+                Varanasi Jn train station, 4 km from the landmark, riverside Kashi Vishwanath Temple .
+                <a href="https://goo.gl/maps/kJ53gWkiJ1Y8b6vk6" target="blank"><img src="ta.png"></a>
+
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <h1>Madin Hotel</h1>
+                On a bustling tree-lined road, this sleek hotel is 2 km from Varanasi train station and 5 km from
+                the
+                18th-century Kashi Vishwanath Temple on the Ganges River.
+
+                <a href="https://goo.gl/maps/HKz5x5sd1s2YTbr37" target="blank"><img src="ma.jpg"></a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="bx">
+
+
+            <div class="last" id="last-1">
+                <h1>Hotel Radisson</h1>
+                Occupying a grand building on 40 acres of landscaped gardens, this upscale hotel is 2 km from the
+                Varanasi Jn train station, 4 km from the landmark, riverside Kashi Vishwanath Temple .
+                <a href="https://www.radissonhotels.com/en-us/hotels/radisson-varanasi" target="blank"><img
+                        src="radisson.jpg"></a>
+
+
+            </div>
+
+
+            <div class="last" id="last-2">
+                <h1>Surya Hotel</h1>
+                On a bustling tree-lined road, this sleek hotel is 2 km from Varanasi train station and 5 km from
+                the
+                18th-century Kashi Vishwanath Temple on the Ganges River.
+
+                <a href="https://www.hotelsuryavns.com/" target="blank"><img src="surya.jpeg"></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="inner-footer">
+            <div class="social-links">
+                <ul>
+                    <li class="social-items"><a href="https://m.facebook.com/104571722076653/" target="blank"><i
+                                class="fab fa-facebook"></i></a></li>
+                    <li class="social-items"><a href="https://twitter.com/TravelVaranasi?t=kGUeXzdr3YJGnl6yjNmULA&s=08"
+                            target="blank"><i class="fab fa-twitter"></i></a></li>
+                    <li class="social-items"><a href="https://instagram.com/kashi_the_luminous_city/" target="blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li class="social-items"><a href="https://youtube.com/channel/UCE41_7ZSlgA_ZO7W9AR0Uiw"><i
+                                class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="quick-links">
+                <ul>
+                    <li class="quick-items"><a href="#home">Home</a></li>
+                    <li class="quick-items"><a href="#services-container">Featuring</a></li>
+                    <li class="quick-items"><a href="#about Us">About Us</a></li>
+                    <li class="quick-items"><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="outer-footer">
+            | Copyright &copy; TTB !!! All Right Reserved |
+        </div>
+    </footer>
+</body>
+
+</html>

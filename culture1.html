@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Culture & Heritage</title>
+</head>
+<style>
+
+/* CSS RESet */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+.head
+.logo{
+    display: inline-block;
+    
+    text-align: center;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin: 0px 0px;
+    padding: 15px 20px;
+
+}
+
+.head1{
+
+    display: flex;
+    
+    text-align: center;
+    width: 100%;
+    /* border: 2px solid red; */
+    
+    background-color: #434343;
+    font-size: 3.5rem;
+    font-family: 'Baloo Bhai', cursive;
+    animation: animate 3s forwards;
+    opacity: 0.89;
+}
+.head1 p{
+    color: #a8e8a8;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 350px;
+    font-family: 'Trocchi', serif;
+}
+.head1 img{
+    text-align: left;
+    margin: 6px 39px;
+}
+
+
+
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -1px;
+    background-color: #dedddd;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.77;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 38px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 10px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    
+    color: #a8e8a8;
+    display: block;
+    margin-left: 22px;
+    padding: 3px 30px;
+    border-radius: 15px;
+    text-decoration:wavy;
+
+}
+
+#navbar ul li a:hover{
+    transition: 1s;
+    color: black;
+    background-color:white;
+}
+#navbar ul input[type=text] {
+    float: right;
+    border: 2px solid gray;
+    border-radius: 20px;
+    
+    padding: 10px 45px;
+    /* border: none; */
+    margin-top: 0px;
+    margin-right: 0px;
+    font-size: 16px;
+    
+    color: black;
+    cursor: pointer;
+
+  }
+   /* Add a hover effect if you want */
+   .fa:hover {
+        opacity: 0.7;
+      }
+      
+      /* Set a specific color for each brand */
+      
+      /* Facebook */
+      .fa-linkedin {
+        background: #f4f6fa;
+        color: rgb(39, 142, 226);
+      }
+      
+      /* Twitter */
+      .fa-youtube {
+        background: #cb2027;
+        color: white;
+    }
+      .fa-facebook {
+        background: #206ccb;
+        color: white;
+    }
+      .fa-twitter {
+        background: #fefefe;
+        color: #2c6dbe;
+    }
+
+    
+   
+     
+    
+    .fa-instagram {
+        background:palevioletred;
+        color: white;
+   
+     
+    }
+
+
+
+ .bm {
+    margin: 10px;
+    padding: 20px;
+    background-color:cornsilk  ;
+    font-family:cursive;
+    font-size:20px ;
+
+    color:black;
+    }
+
+    .bm img{
+        margin:2px ;
+        margin-right: 15px;
+        padding:1px;
+        width:100%;
+        height:450px;
+        image-orientation: flip;
+        
+
+    }
+    .bm h1{
+        font-family:'Baloo Bhai';
+        text-decoration-line: underline ;
+         
+    }
+    #services{
+    background-color: cornsilk;
+    margin: 70px -4px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid rgb(0, 0, 0);
+    
+    padding: 34px;
+    margin: 50px 55px;
+    border-radius: 28px;
+    background: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+
+} 
+/* Footer */
+.inner-footer{
+    margin:0px;
+    padding: 0px;
+    
+    background-color: #dddddd;
+}
+.social-links{
+    display: flex;
+}
+.social-links ul{
+    padding: 20px;
+    display: flex;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    
+}
+.social-items{
+    display: flex;
+}
+.social-items{
+    list-style: none;
+}
+.social-items a{
+    padding: 10px 20px;
+    font-size: 35px;
+    /* color:#6cccc6 ; */
+    transition: all .25s;
+}
+.social-items a:hover{
+    color: #54ada8;
+}
+.quick-links{
+    display: flex;
+    width: 660px;
+    height: 70px;
+    margin: 60px 560px;
+}
+.quick-links ul{
+    display: flex;
+}
+.quick-items{
+    list-style: none;
+}
+.quick-items a{
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 20px;
+    color:#052b28;
+    transition: all .25s;
+    
+}
+.quick-items a:hover{
+    color: blue;
+
+}
+.outer-footer{
+    background-color: #dddddd;
+    margin-top: 59px;
+    padding: 10px;
+    text-align: center;
+    color: #6cccc6;
+    font-size: 18px;
+}
+
+
+
+</style>
+<body>
+    
+  <header>
+    <div class="head1">
+      <img src="The Travel Blog-logos_edited1.jpg" alt="KashiBlog" width="100px" height="100px">
+      <p>
+        The Travel Blog
+
+      </p>
+    </div>
+
+  </header>
+  <hr>
+  <nav id="navbar">
+    <div id="logo">
+      <img src="kashi_logos.jpg" alt="KashiBlog" width="100px" height="100px">
+    </div>
+    <ul>
+      <li class="itam"><a href="Page1.html">Home</a></li>
+      <li class="itam"><a href="ghat.html" target="blank" class="active">Ghats</a></li>
+      <li class="itam"><a href="temple.html">Temples</a></li>
+      <li class="itam"><a href="food.html">Food & Hotels</a></li>
+      <li class="itam"><a href="near.html">Near By Places</a></li>
+      <input type="text" placeholder="Search..">
+
+
+
+    </ul>
+
+
+  </nav>
+
+
+     <div class="bm">
+         
+         <h1>Culture & Heritage</h1>
+
+        <img src="history.jpg">
+
+        <p3>Importance of Banaras in India and especially for Hindus; various aspects of Banaras, its many names
+            and what makes it the cultural capital of India. click for</p3>
+
+
+
+        <p3> Arts, Crafts and Architecture of Banaras: You will be amused to see that Varanasi is a Museum
+            architectural designs. It has a rich and original variety of paintings and sculptor styles and
+            equally rich treasures of folk art. During the ages Varanasi has produced master craftsmen and has
+            earned name and fame for its Sarees, handicrafts, textiles.</p3>
+
+     </div> 
+     <section id="services-container">
+        
+        <div id="services">
+          <div class="box">
+            <img src="images.jpg" alt="">
+            <h2 class="h-secondary center">Festival</h2>
+            <p class="center">Top festivals celebrated in Varanasi are Mahashivratri, ShavanMaah, Holi, Deepavali, Dhrupad Mela, Ekadashi, Akshya Tritiya, and others. Almost all Hindu festivals are celebrated religiously here. Do you know that the land has many festivals dedicated to music? Top music festival of Varanasi are Drupad Festival of TulsiGhat ( March/April), SankatMochanSangeetSamaroh (April/May), Kartik Purnima (November), and others. During Buddha Purnima and Shivratri, many music performances take place.</p>
+          </div>
+          <div class="box">
+            <img src="2.jpg" alt="">
+            <h2 class="h-secondary center">Art & Religions</h2>
+            <p class="center">Varanasi has a unique art culture. In the past, it was the center of traditions and culture. Every modern cultural performancewas derived by the ancient art and culture of this land. According to historians, the Banaras or Kashi was famous for many art works and performance arts. Top art works that flourished the land were metal works, Banaras silk weaving, copperware, and others.Varanasi is the birthplace of three main religions of India; Hinduism, Jainism, and Buddhism. These spirituality beliefs and rituals revolve around the holy River Ganges, which is believed to be sent to Earth by Lord Shiva to flourish the land.</p>
+          </div>
+          <div class="box">
+            <img src="7.jpg" alt="">
+            <h2 class="h-secondary center"> Fort</h2>
+            <p class="center">
+                The Ramnagar Fort is a fortification in Ramnagar, Varanasi, India. It is located near the Ganges on its
+                    eastern bank, opposite to the Tulsi Ghat. timing:10am-5pm
+                
+                Chunar Fort is an ancient forts tracing back to 56 AD. Several legends are related to Chunar Fort and the
+                    town of Chunar. It is said to be an impregnable fort for ages. Chunar Fort is located in the Mirazapur
+                    district in Uttar Pradesh.</p>
+          </div>
+        </div>
+    </section>
+
+      <div class="bm"><h1>History</h1>
+        <p1>Varanasi is one of the oldest cities in the world, which is still in use. The city was first named as Kashi. According to mythology, Gods created this city for them to live amidst humans. Lord Shiva is said to have lived in Khasi. According to historians, the civilization in Varanasi was started by Aryans during the Ganges Valley civilization. By the end of 2nd century BC, Varanasi was one of the thriving and wealthy regions of the country.
+
+            In 6th century BC, Lord Buddha gave his first sermon, just 10 km away from Varanasi, introducing the new religion, Buddhism. Many people from around the country reached Kashi to learn about various fields. A Chinese traveler, Hsuan Tsang visited Kashi in 635 AD.
+            
+            The land flourished until 12th century, when invaders destructed most of the ancient Kashi. Many Muslim rulers destroyed Varanasi for three centuries until Akbar came into throne to restore the city to its previous glory, only to be again destroyed by Aurangzeb in 17th century. In 18th century, Varanasi was announced as a separated kingdom, with the capital at Ramnagar. British declared it as a separate state in the beginning of 20th century. After independence, Varanasi was added to Uttar Pradesh boundary.</p1>
+        <h2>Language</h2>
+            <p1>More than 95% of the local population speaks Hindi and around 3% of the population mentioned Urdu as their first language. Bhojpuri is also spoken in Varanasi. Historically, Sanskrit was the oldest language of Banaras. However, English is quite common today in Varanasi.</p1>
+            <img src="festival.png">
+           
+           
+               <h3>Dance and Music</h3>
+          <p2>Varanasi is an epitome of music, since the ancient times. Vocal and instrumental music thrived in Benaras. Even today, the city is filled with rich folk music works. The dance and music forms of Varanasi were said to be developed by Lord Shiva. The music traditions were spread by Renu, son of Vishvamitra. Ancient saints famous for music skills are Meera, Kabir, Surdas, Tulsidas, and Ravidas. The modern form of music developed during the neo-Vaishnava movement.
+
+            During 16th century, new forms of music like Hori, Dhamar, Chaturanga, Assarwari, and others were developed. In the recent times, modern music forms like Chaiti, Banarasi Thumri, Kajri, Hori, and others were developed. Notable music personalities of Varanasi are Samta Prasad, Kishan Maharaj, Samar Saha, and others.</p2>  
+        
+        <h2> Varanasi crafts</h2>
+        <p2>Banaras Silk is the most important craft of the city. It takes more than 6 months to craft a saree, and it is considered as heirloom by locals. Other top craft items of the land are
+
+            Ivory work
+            Brassware
+            Bhadohi carpets
+            Musical instruments
+            Copperware
+            Wooden toys
+            Clay toys
+            Stone articles
+            Gold articles</p2>
+            <img src="crafts.jpg">
+            <h2>Famous things for shopping</h2>
+
+
+            <li>Varanasi is famous for its production of silks and brocades with gold and silver threadwork. </li>
+            <li> Wooden toys, bangles made of glass, ivory work, and brass ware are also produced in Varanasi.</li>
+            
+            <h1>Market & Clothing</h1>
+            <h3>Clothing</h3>
+             <p3> Varanasi is a traditional land with strongly-held life values. Thus, tourists are expected to respect that tradition by wearing decent clothing. Both the genders are expected to wear clothing that stretches below knee, and covers neck region, appropriately. Summers in Varanasi are hot and humid. Thus, choose thin cotton clothing. Monsoon provides heavy rainfall and creates muddy puddles throughout the road. Thus, wear dark clothing with appropriate rain gears. Winter is pleasingly warm with cool nights. A thin jacket will suffice for winter visitors.</p3>   
+             <img src="market.jpg">
+             <h2>Markets to visit</h2>
+
+        
+             <h3>Thatheri Bazar </h3>
+ 
+             <p2>Location: Thatheri Bazaar, Varanasi, Uttar Pradesh 221002
+                 Timings: 10.00AM- 8.00PM
+                 What to buy: Brass product, antiques, copper products, and religious artifacts.</p2>
+         
+ 
+         
+             <h3> Vishwanath Lane </h3>
+             <p2>Location: Varanasi, Uttar Pradesh
+                 Timings: 10.00AM-8.00PM
+                 What to buy: Designer bangles, wooden toys, and décor items and dupattas</p2>
+         
+         
+             <h3> Dal Mandi Market </h3>
+             <p2>Location: Godaulia, Varanasi, Uttar Pradesh
+                 Timings: 10.00 AM-8.30 PM
+                 What to buy: Dress materials, sarees, and other clothing items</p2>
+         <h3>Chowk and Urban Hatt </h3>
+             <p2>Location: Varanasi, Uttar Pradesh
+                 Timings: 9.00AM-8.00PM
+                 What to buy: handloom products</p2>
+         
+     
+ 
+ 
+ 
+
+                 
+        </div>  
+        <footer class="footer">
+    
+            <div class="social-links">
+              <ul>
+                <li class="social-items"><a href="https://m.facebook.com/104571722076653/" target="blank"><i
+                      class="fab fa-facebook"></i></a></li>
+                <li class="social-items"><a href="https://twitter.com/TravelVaranasi?t=kGUeXzdr3YJGnl6yjNmULA&s=08"
+                    target="blank"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-items"><a href="https://instagram.com/kashi_the_luminous_city/" target="blank"><i
+                      class="fab fa-instagram"></i></a></li>
+                <li class="social-items"><a href="https://youtube.com/channel/UCE41_7ZSlgA_ZO7W9AR0Uiw"><i
+                      class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+            <div class="quick-links">
+              <ul>
+                <li class="quick-items"><a href="#home">Home</a></li>
+                <li class="quick-items"><a href="#services-container">Featuring</a></li>
+                <li class="quick-items"><a href="#about Us">About Us</a></li>
+                <li class="quick-items"><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+      
+          </div>
+          <div class="outer-footer">
+            | Copyright &copy; TTB !!! All Right Reserved |
+          </div>
+        </footer>
+</body>
+</html>

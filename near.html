@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Near By Places</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* CSS Variables */
+    :root {
+        --navbar-height: 59px;
+    }
+
+    .head .log {
+        display: inline-block;
+
+        /* text-align: center; */
+        width: 100%;
+        /* border: 2px solid red; */
+        margin: 0px 0px;
+        padding: 15px 20px;
+
+    }
+
+    .head1 {
+
+        display: flex;
+
+        text-align: center;
+        width: 100%;
+        /* border: 2px solid red; */
+
+        background-color: #434343;
+        font-size: 3.5rem;
+        font-family: 'Baloo Bhai', cursive;
+        animation: animate 3s forwards;
+        opacity: 0.89;
+    }
+
+    .head1 p {
+        color: #a8e8a8;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 350px;
+    }
+
+    .head1 img {
+        text-align: left;
+        margin: 6px 39px;
+    }
+
+
+
+
+    /* Navigation Bar */
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: -1px;
+        background-color: #dedddd;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.77;
+    }
+
+    /* Navigation Bar: Logo and Image */
+    #logo {
+        margin: 10px 48px;
+    }
+
+    #logo img {
+        height: 59px;
+        margin: 3px -10px;
+    }
+
+
+    /* Navigation Bar: List Styling */
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    #navbar ul li a {
+
+        color: #a8e8a8;
+        display: block;
+        margin-left: 22px;
+        padding: 3px 40px;
+        border-radius: 15px;
+        text-decoration: wavy;
+
+    }
+
+    #navbar ul li a:hover {
+        transition: 1s;
+        color: black;
+        background-color: white;
+    }
+
+    #navbar ul input[type=text] {
+        float: right;
+        border: 2px solid gray;
+        border-radius: 20px;
+
+        padding: 0px 45px;
+        /* border: none; */
+        margin-top: 0px;
+        margin-right: 0px;
+        font-size: 16px;
+
+        color: black;
+        cursor: pointer;
+
+    }
+     /* Add a hover effect if you want */
+     .fa:hover {
+        opacity: 0.7;
+      }
+      
+      /* Set a specific color for each brand */
+      
+      /* Facebook */
+      .fa-linkedin {
+        background: #f4f6fa;
+        color: rgb(39, 142, 226);
+      }
+      
+      /* Twitter */
+      .fa-youtube {
+        background: #cb2027;
+        color: white;
+    }
+      .fa-facebook {
+        background: #206ccb;
+        color: white;
+    }
+      .fa-twitter {
+        background: #fefefe;
+        color: #2c6dbe;
+    }
+
+    
+   
+     
+    
+    .fa-instagram {
+        background:palevioletred;
+        color: white;
+   
+     
+    }
+
+
+
+    .bm {
+        margin: 10px;
+        padding: 20px;
+        background-color: cornsilk;
+        font-family: cursive;
+        font-size: 21px;
+
+        color: black;
+    }
+
+    .bm h1 {
+        font-family: 'Baloo Bhai',cursive;
+        margin-left: 55px;
+        padding-left: 305px;
+        text-decoration: underline;
+
+
+    }
+  
+    .bm h3 {
+        text-align: center;
+        font-size: 40px;
+        font-style: italic;
+        text-decoration-line: underline;
+
+
+    }
+
+
+    .bm img {
+        margin: 2px;
+        padding: 1px;
+        width: 100%;
+        height: 550px;
+
+        animation-name: m;
+        animation-duration: 8s;
+        /* position: sticky; */
+        animation-iteration-count: 4;
+
+    }
+
+
+
+    .hm {
+        margin: 0px;
+        padding: 0px;
+        display: flexbox;
+        background-color: rgb(31, 7, 7);
+    }
+
+    .only {
+        background-color: rgb(194 194 194 / 44%);
+        ;
+        border: 10px solid #2a404b;
+        ;
+        margin: 5px;
+        margin-right: -5px;
+        padding: 5px;
+        height: 300px;
+    }
+
+    /* Footer */
+    .inner-footer {
+        margin: 0px;
+        padding: 0px;
+
+        background-color: #dddddd;
+    }
+
+    .social-links {
+        display: flex;
+    }
+
+    .social-links ul {
+        padding: 20px;
+        display: flex;
+        width: 300px;
+        height: 30px;
+        margin: auto;
+
+    }
+
+    .social-items {
+        display: flex;
+    }
+
+    .social-items {
+        list-style: none;
+    }
+
+    .social-items a {
+        padding: 10px 20px;
+        font-size: 35px;
+        /* color:#6cccc6 ; */
+        transition: all .25s;
+    }
+
+    .social-items a:hover {
+        color: #54ada8;
+    }
+
+    .quick-links {
+        display: flex;
+        width: 560px;
+        height: 70px;
+        margin: 60px 560px;
+    }
+
+    .quick-links ul {
+        display: flex;
+    }
+
+    .quick-items {
+        list-style: none;
+    }
+
+    .quick-items a {
+        text-decoration: none;
+        padding: 0px 15px;
+        font-size: 20px;
+        color: #052b28;
+        transition: all .25s;
+
+    }
+
+    .quick-items a:hover {
+        color: blue;
+
+    }
+
+    .outer-footer {
+        background-color: #dddddd;
+        margin-top: -59px;
+        padding: 10px;
+        text-align: center;
+        color: #6cccc6;
+        font-size: 18px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="head1">
+            <img src="The Travel Blog-logos_edited1.jpg" alt="KashiBlog" width="100px" height="100px">
+            <p>
+                The Travel Blog
+
+            </p>
+        </div>
+
+    </header>
+    <hr>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="kashi_logos.jpg" alt="KashiBlog" width="100px" height="100px">
+        </div>
+        <ul>
+            <li class="itam"><a href="Page1.html">Home</a></li>
+            <li class="itam"><a href="ghat.html" class="active">Ghats</a></li>
+            <li class="itam"><a href="temple.html">Temples</a></li>
+            <li class="itam"><a href="food.html">Food & Hotels</a></li>
+            <li class="itam"><a href="near.html">Near By Places</a></li>
+            <input type="text" placeholder="Search..">
+
+
+
+        </ul>
+
+
+    </nav>
+
+
+    <div class=bm>
+        <h1>Top 10 Places to Visit Near Varanasi</h1>
+        <img src="nearbg.jpg" alt="">
+        <br>
+        <br>
+
+        <span>
+           <ul>
+
+               Attracting a lot of tourists all year round, there are incredibly stunning places to visit near Varanasi.
+                Embracing various tourist destinations from wildlife sanctuaries to hill stations, Varanasi is a perfect
+                destination for a getaway with your friends and family. Explore the places near Varanasi on a weekend trip
+                or a vacation and create moments to cherish for years to come.
+           </ul> 
+           <br>
+           
+            
+            <ul>
+
+                With abundant tourist places near Varanasi, experience an amalgamation of rich culture, religion and
+                history, all combined into one vacation. Fill your heart with peace and contentment while visiting
+                pilgrimage spots like Singhpur Sarnath and Ayodhya.
+            </ul>
+            <br>
+           
+            <ul>
+
+                Take in the scenic surroundings at Rewa or witness the timeless beauty and architectural marvels at Agra.
+                Observe the splendid Islamic architecture in the City of Nawabs, Lucknow or spend some time at Mirzapur
+                soaked in the natural beauty, places to visit near Varanasi won’t disappoint you.
+            </ul>
+            
+        </span>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <h3>1. Singhpur Sarnath</h3>
+        <img src="singhpursartnath.jpg" alt="">
+        <p4>Singhpur Sarnath is one of the most significant pilgrimage spots for Hindus, Buddhists and Jains making it
+            one of the most fascinating places to visit around Varanasi. According to many legends, it is believed that
+            Lord Buddha visited this place after his enlightenment. Filled with numerous Buddhist architecture and
+            heritage, Sarnath attracts tourists from all over the world. The deer park is considered to be the place
+            where Lord Gautam Buddha first taught the Dharma. </p4>
+        <div class=only>
+            <p>
+
+                With different countries like Thailand, Japan, Sri Lanka, Myanmar and Tibet establishing temples in
+                Sarnath
+                according to their exotic style, tourists get a chance to experience the rich diversity of the style of
+                architecture from different cultures. The 80 feet standing statue of Buddha in the Thai Temple of
+                Sarnath is
+                another highlight of the place.
+            </p>
+            <br>
+
+            <li> Best time to visit- From October to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 11.2 km</li>
+            <br>
+
+            <li> Highlights- Standing Buddha Statue, Deer Park, Dhamekh Stupa, Sarnath Museum, historical sites,
+                architectural attractions of various cultures.</li>
+            <br>
+
+        </div>
+        <h3>2. Chandauli</h3>
+        <img src="chandauli.jpg" alt="">
+        <p4>Chandauli is a noteworthy tourist destination and the town is named after Chandra Sah, a Barhaulia Rajput
+            who founded the town. Later, his descendants built a fort in Chandauli which is still famous among visitors.
+            With various scenic beauty spots, like the Devdari Falls and the rich Chandra Prabha Wildlife Sanctuary,
+            Chandauli is one of the most popular places to visit around Varanasi. </p4>
+        <div class=only>
+            <p>
+
+                Within the Wildlife Sanctuary you will find several picnic spots and also two cascading waterfalls.
+                Other places of interest in Chandauli are the Muskhand Dam, Latif Shah Tomb, Raj Dari, Latif Shah Dam.
+            </p>
+            <br>
+
+            <li> Best time to visit- From October to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 40 km</li>
+            <br>
+
+            <li> Highlights- Devdari Falls, Rajdari Falls, Mushkand Dam, Chandra Prabha Wildlife Sanctuary, Latif Shah
+                Dam, Forts, picnic spots and waterfalls.</li>
+            <br>
+
+        </div>
+        <h3>3. Mirzapur</h3>
+        <img src="mirzapur.jpg" alt="">
+        <p4>Mirzapur is a town with a lot of history and it attracts not only tourists but also history buffs and
+            archaeologists. The rock paintings and the various artefacts found here are enough to prove that the
+            palaeolithic age existed in this region and signs of civilization here dates back to 5000 BCE. Apart from
+            this, Mirzapur is also famous for its scenic landscape and natural beauty. </p4>
+        <div class=only>
+            <p>
+
+                Another claim to fame for Mirzapur are its beautiful ghats. As the river Ganges flows through this city,
+                there are many ghats where tourists visit to take a dip or witness the mesmerizing sunset. Mirzapur also
+                has a Ghanta Ghar, where a 1000 kg alloy bell hangs. Other places of interest include Ojhala Bridge,
+                Kali Koh, Siddhnath Ki Dari waterfall, etc.
+            </p>
+            <br>
+
+            <li> Best time to visit- From November to April</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 59 km</li>
+            <br>
+
+            <li> Highlights- Ghanta Ghar, Vindyachal, Ojhala Bridge, ghats, monuments, Chunar Fort and Kaal Bhairavi
+                Temple.</li>
+            <br>
+
+        </div>
+        <h3>4. Sonbhadra</h3>
+        <img src="sonhbara.jpg" alt="">
+        <p4>Sonbhadra is the second largest administrative district in Uttar Pradesh and it is home to some of the most
+            fascinating ancient forts, monuments and structures. It is one of the most fascinating places to visit near
+            Varanasi and famous for its ancient forts and rock carvings. The Vijaygarh Fort in Sonbhadra dates back to
+            the 5th century and it is one of the major attractions here.</p4>
+        <div class=only>
+            <p>
+                This fort has some really incredible rock carvings and inscriptions of that era. Another popular fort is
+                the Naugarh Fort built by the Kashi Kings. The Salkhan Fossil Park has fossil exhibits that dates back
+                to more than 1400 million years ago. Sonbhadra has several other tourist attractions such as the Rihand
+                Dam, Agori Fort, Mukha Falls, Lorika Rock, Chandra Prabha Wildlife Sanctuary and Shivdwar.
+            </p>
+            <br>
+
+            <li> Best time to visit- From November to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 95.7 km</li>
+            <br>
+
+            <li>Highlight- Naugarh Fort, Vijaygarh Fort, Rihand Dam, Lorika Rock, Rock paintings, Shiv Dwar, Salkhan
+                Fossil Park and Agori Fort.</li>
+            <br>
+
+        </div>
+        <h3>5. Kaimur</h3>
+        <img src="kaimur.jpg" alt="">
+        <p4>Kaimur was an important part of the Magadha Empire and played a major role during the Freedom Struggle. Now
+            it has evolved into a wonderful holiday destination and one of the most fascinating places to visit near
+            Varanasi. Kaimur has a whole plethora of attractions for its visitors ranging from forts, temples, gushing
+            rivers and cascading waterfalls, dense forests and scenic picnic spots. </p4>
+        <div class=only>
+            <p>
+
+                It also plays hosts to several festivals and fairs with devotees and tourists visiting in hordes. One of
+                the major attractions here is the Maa Mundeshwari Devi Temple which is dedicated to Lord Shiva and dates
+                back to 108 AD.
+            </p>
+            <br>
+
+            <li> Best time to visit- From October to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 97.4 km</li>
+            <br>
+
+            <li> Highlight- Mundeshwari Temple, Baidyanath Temple, Kaimur Wildlife National Park, Karkat Waterfall,
+                Bhabua, Ramgarh and Adhaura.</li>
+            <br>
+
+        </div>
+        <h3>6. Prayagraj</h3>
+        <img src="praayagraj.jpg" alt="">
+        <p4>Being one of the largest and most populated cities of India, Allahabad or Prayagraj is well known for its
+            magnificent architecture from the Mughal Era. Prayagraj is one of the oldest cities in the world and it
+            attracts hordes of tourists all year round. The most fascinating place to visit in Allahabad is the Triveni
+            Sangam, which is the junction point of three rivers- Ganga, Yamuna, and Saraswati. </p4>
+        <div class=only>
+            <p>
+
+                This place is of high religious importance in Hinduism and is considered to be the site of offering
+                sacrifice. Other important sites are, the Khusro Bagh, a tombstone built by King Jahangir for his son
+                Khusro, the Ananda Bhawan, Allahabad Museum, Allahabad Fort, Allahabad Planetarium and many more.
+            </p>
+            <br>
+
+            <li> Best time to visit- From October to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 120 km</li>
+            <br>
+
+            <li> Highlights - Khusro Bagh, Triveni Sangam, Kumbh Mela, Allahabad Museum, All Saints’ Cathedral,
+                Allahabad Fort and Alfred Park</li>
+            <br>
+
+        </div>
+        <h3>7. Gorakhpur</h3>
+        <img src="gorakpurf.jpg" alt="">
+        <p4>Gorakhpur is a vibrant city in the eastern part of Uttar Pradesh. It is famous for its rich culture, vibrant
+            surroundings, Buddhist, Jain and Hindu religious sites and Heritage sites. Gorakhpur was one of the 16
+            states, also known as Mahajanapadas, that existed in India right from the 6th century BC. </p4>
+        <div class=only>
+            <p>
+
+                One of the biggest claims to fame that Gorakhpur has is the Gorakhpur Press that publishes the Bhagavad
+                Gita. Gorakhpur, like many other famous towns and cities in India, has several beautiful temples. One of
+                the most popular one is the Gorakhpur Temple. Another major attraction here is the Rail Museum that
+                showcases the journey of the development of trains and train travel in India.
+            </p>
+            <br>
+
+            <li> Best time to visit- From November to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 190.1 km</li>
+            <br>
+
+            <li>Highlight- Gorakhpur Temple, Rail Museum, religious heritage sites, museums, ancient monuments and
+                vibrant market places.</li>
+            <br>
+
+        </div>
+        <h3>8. Ayodhya</h3>
+        <img src="ayodyaf.jpg" alt="">
+        <p4>Ayodhya is regarded as one of the seven most important pilgrimage sites for Hindus and thus attracts
+            tourists from all over the world. Being the center of the epic Ramayana, Ayodhya boasts of the rich
+            mythological culture it holds. There are multiple ghats located in Ayodhya on the banks of the Ghaghara
+            River. Not only Hinduism, Ayodhya is also a base city for many other religious groups such as Jains,
+            Buddhists as well Islam. </p4>
+        <div class=only>
+            <p>
+                Some of the places of interest in Ayodhya are Sri Vijayaraghavaji Temple, Hanuman Garhi Fort, Ramkot,
+                Nageshwarnath Temple, Angad Tila, Darbarji Durgakali Temple and many more. Some believe that the
+                legendary princess Heo Hwang-ok was a native of Ayodhya and a memorial dedicated to the Queen was built
+                in Ayodhya in 2001 and remains an important attraction for travelers from Korea as well as other parts
+                of the world.
+            </p>
+            <br>
+
+            <li> Best time to visit- From October to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 202.4 km</li>
+            <br>
+
+            <li>Highlights- Angad Tila, Sri Vijay Raghav Ji Temple, Sita ki Rasoi, Heo Hwang-ok Memorial, Temples,
+                Buddhist vihara and Ram Janmabhoomi Temple.</li>
+            <br>
+
+        </div>
+        <h3>9. Rewa</h3>
+        <img src="rewaf.jpg" alt="">
+        <p4>Rewa is a wonderful blend of scenic natural surroundings and spectacular man-made attractions. It is filled
+            with some of the most interesting and intriguing museums, forts, historical villages, tiger reserve and
+            breathtaking landscape. Rewa is also famous for being an ideal home for the majestic white tigers. </p4>
+        <div class=only>
+            <p>
+
+                Some of the highest and most spectacular waterfalls are also found in Rewa. Some of the most scenic ones
+                are Bahuti, Purva and Keoti waterfalls. It is also home to some of the most ancient monuments,
+                sculptures and carvings such as the reclining Bhairav Baba Statue.
+            </p>
+            <br>
+
+            <li> Best time to visit- July to September
+
+            </li>
+            <br>
+
+
+            <li> Distance from Varanasi- 221 km</li>
+            <br>
+
+            <li>Highlight- Forts, Temples, Monuments, White Tiger Safari, Viyankat Bhawan, Baghela Museum, Bhairavnath
+                statue, the Royal Museum, Teonthar and the Govindgarh Palace. </li>
+            <br>
+
+        </div>
+        <h3>10. Bodhgaya</h3>
+        <img src="Bohdgayaf.jpg" alt="">
+        <p4>Bodhgaya is one of the four most significant Buddhist religious sites and an important pilgrimage
+            destination. Lord Buddha gained enlightenment under the Mahabodhi Tree here and Bodhgaya itself has been
+            declared a UNESCO World Heritage Site. The most interesting attractions here are the various temples and
+            shrines built by countries like Nepal, Vietnam, Thailand and others. </p4>
+        <div class=only>
+            <p>
+                All these temples and shrines depict the different architectural styles of these countries making
+                Bodhgaya one of the most interesting places to visit near Varanasi.
+            </p>
+            <br>
+
+            <li> Best time to visit- From October to March</li>
+            <br>
+
+
+            <li> Distance from Varanasi- 242 km</li>
+            <br>
+
+            <li>Highlight- Mahabodhi Tree, Buddhist Temples, shrines and monasteries, Museums, Thai Monastery,
+                Vietnamese Temple, Mahabodhi Temple and religious fairs and festivals.</li>
+            <br>
+
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="inner-footer">
+                <div class="social-links">
+                    <ul>
+                        <li class="social-items"><a href="https://m.facebook.com/104571722076653/" target="blank"><i
+                                    class="fab fa-facebook"></i></a></li>
+                        <li class="social-items"><a
+                                href="https://twitter.com/TravelVaranasi?t=kGUeXzdr3YJGnl6yjNmULA&s=08"
+                                target="blank"><i class="fab fa-twitter"></i></a></li>
+                        <li class="social-items"><a
+                                href="https://instagram.com/kashi_the_luminous_city?utm_medium=copy_link"
+                                target="blank"><i class="fab fa-instagram"></i></a></li>
+                        <li class="social-items"><a href="https://youtube.com/channel/UCE41_7ZSlgA_ZO7W9AR0Uiw"><i
+                                    class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="quick-links">
+                    <ul>
+                        <li class="quick-items"><a href="Page1.html">Home</a></li>
+                        <li class="quick-items"><a href="#services-container">Featuring</a></li>
+                        <li class="quick-items"><a href="#about Us">About Us</a></li>
+                        <li class="quick-items"><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <footer>
+                <div class="outer-footer">
+                    | Copyright &copy; TTB !!! All Right Reserved |
+                </div>
+            </footer>
+
+
+
+</body>
+
+</html>

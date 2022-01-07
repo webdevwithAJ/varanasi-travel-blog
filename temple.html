@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="page1.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Temples</title>
+</head>
+
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+.head
+.log{
+    display: inline-block;
+    
+    /* text-align: center; */
+    width: 100%;
+    /* border: 2px solid red; */
+    margin: 0px 0px;
+    padding: 15px 20px;
+
+}
+
+.head1{
+
+    display: flex;
+    
+    text-align: center;
+    width: 100%;
+    /* border: 2px solid red; */
+    
+    background-color: #434343;
+    font-size: 3.5rem;
+    font-family: 'Baloo Bhai', cursive;
+    animation: animate 3s forwards;
+    opacity: 0.89;
+}
+.head1 p{
+    color: #a8e8a8;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 350px;
+    font-family: 'Trocchi', serif;
+}
+.head1 img{
+    text-align: left;
+    margin: 6px 39px;
+}
+
+
+
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -1px;
+    background-color: #dedddd;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.77;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 48px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px -10px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    
+    color: #a8e8a8;
+    display: block;
+    margin-left: 22px;
+    padding: 3px 40px;
+    border-radius: 15px;
+    text-decoration:wavy;
+
+}
+
+#navbar ul li a:hover{
+    transition: 1s;
+    color: black;
+    background-color:white;
+}
+#navbar ul input[type=text] {
+    float: right;
+    border: 2px solid gray;
+    border-radius: 20px;
+    
+    padding: 0px 45px;
+    /* border: none; */
+    margin-top: 0px;
+    margin-right: 0px;
+    font-size: 16px;
+    
+    color: black;
+    cursor: pointer;
+
+  }
+   /* Add a hover effect if you want */
+   .fa:hover {
+        opacity: 0.7;
+      }
+      
+      /* Set a specific color for each brand */
+      
+      /* Facebook */
+      .fa-linkedin {
+        background: #f4f6fa;
+        color: rgb(39, 142, 226);
+      }
+      
+      /* Twitter */
+      .fa-youtube {
+        background: #cb2027;
+        color: white;
+    }
+      .fa-facebook {
+        background: #206ccb;
+        color: white;
+    }
+      .fa-twitter {
+        background: #fefefe;
+        color: #2c6dbe;
+    }
+
+    
+   
+     
+    
+    .fa-instagram {
+        background:palevioletred;
+        color: white;
+   
+     
+    }
+
+
+    #t {
+        
+      border: 5px solid black;
+      margin: 20px;
+      padding: 20px;
+    }
+    .temple{
+        
+        background-image:url("templeb1.jpg");
+      color:black;
+    }
+    .temple h1{
+      font-family: 'Baloo Bhai',cursive;
+    margin-left: 120px;
+    padding-left: 325px;
+    padding-bottom: 25px;
+    text-decoration: underline;
+    }
+    .temple1{
+        
+        
+      background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple2{
+        
+     background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple3{
+        
+        
+      background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple4{
+        
+      
+      background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple5{
+        
+    
+      background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple6{
+        
+      
+      background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple7{
+        
+        
+      background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple8{
+        
+      
+      background-image:url("b2.jpg");
+      color:black;
+    }
+    .temple9{
+        
+      
+      background-image:url("b2.jpg");
+      color:black;
+    }
+
+    /* Footer */
+.inner-footer{
+    margin:0px;
+    padding: 0px;
+    
+    background-color: #dddddd;
+}
+.social-links{
+    display: flex;
+}
+.social-links ul{
+    padding: 20px;
+    display: flex;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    
+}
+.social-items{
+    display: flex;
+}
+.social-items{
+    list-style: none;
+}
+.social-items a{
+    padding: 10px 20px;
+    font-size: 35px;
+    /* color:#6cccc6 ; */
+    transition: all .25s;
+}
+.social-items a:hover{
+    color: #54ada8;
+}
+.quick-links{
+    display: flex;
+    width: 560px;
+    height: 70px;
+    margin: 60px 560px;
+}
+.quick-links ul{
+    display: flex;
+}
+.quick-items{
+    list-style: none;
+}
+.quick-items a{
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 20px;
+    color:#052b28;
+    transition: all .25s;
+    
+}
+.quick-items a:hover{
+    color: blue;
+
+}
+.outer-footer{
+    background-color: #dddddd;
+    margin-top: -59px;
+    padding: 10px;
+    text-align: center;
+    color: #6cccc6;
+    font-size: 18px;
+}
+
+
+   </style>
+    
+    <body>
+      <header>
+        <div class="head1">
+          <img src="The Travel Blog-logos_edited1.jpg" alt="KashiBlog" width="100px" height="100px">
+          <p>
+            The Travel Blog
+    
+          </p>
+        </div>
+    
+      </header>
+      <hr>
+      <nav id="navbar">
+        <div id="logo">
+          <img src="kashi_logos.jpg" alt="KashiBlog" width="100px" height="100px">
+        </div>
+        <ul>
+          <li class="itam"><a href="page1.html">Home</a></li>
+          <li class="itam"><a href="ghat.html">Ghats</a></li>
+          <li class="itam"><a href="temple.html">Temples</a></li>
+          <li class="itam"><a href="food.html">Food & Hotels</a></li>
+          <li class="itam"><a href="near.html">Near By Places</a></li>
+          <input type="text" placeholder="Search..">
+    
+    
+    
+        </ul>
+    
+    
+      </nav>
+      <div class="temple" id="t">
+        <h1>Famous Temples In Varanasi</h1>
+    <p style="font-size: 150%;"><b>VARANASI</b> is an ancient city in India famous for housing many Hindu temples. The city's ancient holiness makes it a sacred geography in Hinduism. The city's temples were erected at different times throughout the history of Varanasi by various kings, saints, monasteries, guilds and communities. The city is one of the largest collection of historic and newly built Hindu temples. Varanasi is an ancient city with deep spiritual roots and significance for the Hindus and it reflects this heritage in over a thousand temples.</p>
+    <p style="font-size: 150%;">Among the estimated 23,000 temples in Varanasi are Kashi Vishwanath Temple of Shiva, the Sankat Mochan Hanuman Temple, and the Durga Temple. The Kashi Naresh (Maharaja of Kashi) is the chief cultural patron of Varanasi, and an essential part of all religious celebrations.
+      Also known as the Golden Temple, it is dedicated to Lord shiva, the presiding deity of the city. Varanasi is Said to be the point at which the first jyotirlinga, the fiery pillar of light by which shiva manifested has supremacy over others gods, broke through the Earth's crust and flared towards the heavens.
+  </p>
+  <p style="font-size: 150%;">If you fancy exploring a city that takes pride in being older than traditions and legends, and yet has a timeless feel to it, Varanasi will delight you no end. Make sure that you discover the essence of the Spiritual Capital of India through its famous temples that have been weaving the link between the ancient and the modern times in a seamless manner. Here, we give to you a list of temples you must-visit temples in Varanasi, where you can soak in the spiritual vibe of the city in its glorified form.</p>
+</div> 
+ 
+  <div class="temple1">
+    <h2><u>BABA VISHWANATH MANDIR</u></h2>
+    
+    <video controls loop width="620" height="340">
+      <source src="vis.mp4" type="video/mp4" autoplay >
+    </video><p style="font-size: 150%;">Kashi Vishwanath Temple is dedicated to Bhagwan Baba Vishwanath, one of the incarnations of Lord Shiva and he is regarded as the patron deity of Varanasi. The Baba Vishwanath Jyotirlinga Temple at Varanasi has high religious significance and is the center of faith for millions of Hindus and also for other cast people.
+
+        The temple was visited by many great saints including Saint Ramakrishna Paramhansa, Shree Swami Vivekananda, Saint Maharishi Dayanand Saraswati, Swami Goswami Tulsidas,<br> Adi Shankaracharya, and Gurunanak Dev. Baba Vishwanath is considered to the supreme origin of the spiritual truth and<br> strengthens the bonds of universal brotherhood.
+        
+        It is believed that a single darshan of Baba Vishweshwara Jyotirlinga is considered to auspicious more than the darshan of other jyotirlingas in India.</p>
+        <p style="font-size: 150%;">Kashi Vishwanath Pooja Timings: Mangala Aarti: 3:00 AM to 4:00 AM (Morning)<br>
+
+            Bhoga Aarti: 11:15 AM to 12:20 AM (Day)<br>
+            
+            Sandhya Aarti: 7:00 PM to 8:15 PM (Evening)<br>
+            
+            Shringara Aarti: 9:00 PM to 10:15 PM (Night)<br>
+            
+            Shayana Aarti: 10:30 PM ti 11:00 PM (Night)</p>
+    <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.80207226274!2d83.00848961496412!3d25.310853183843466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e21ee940b17%3A0x48600e4fcdfb7b13!2sShri%20Kashi%20Vishwanath%20Temple!5e0!3m2!1sen!2sin!4v1638904812294!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+
+    
+    <div class="temple2" id="t">
+    <h2><u>SANKAT MOCHAN MANDIR</u></h2>
+    
+    <video controls loop width="620" height="340">
+      <source src="san.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+    <p style="font-size: 150%;">Shree Sankat Mochan Hanuman Temple is dedicated to the Lord Hanuman who is considered to be the remover of dangers of devotees.
+
+        The Shree Sankat Mochan Hanuman Temple is located in the southern part of Varanasi. It was built by Pandit Madan Mohan Malviyaji who is also credited to have planned Banaras Hindu University ( BHU ) and Birla temples.
+        
+        The uniqueness of the temple one can notice themselves once entered to Shree Sankat Mochan Hanuman Temple. There is an abundance of monkeys. You can see squeaking, shrieking, snatching, mimicking, and fighting monkeys either among themselves or with devotees. Hanuman Jayanti is one of the big processions is taken out which comes in the month of April. People offer laddoos as Prasad and sindoor (vermilion) to Hanumanji. It is said that once Lord Hanumanji rubbed all sindoor on his body after seeing that Mata Sita put sindoor on the head to get the love of Lord Shree Rama. Since then vermilion is offered to Lord Hanuman as an offering.</p>
+        <p style="font-size: 150%;">The Sankat Mochan Temple opens at 5:00 am in the morning and closed at 10:00 pm in the night. over a year ago. The temple is open from 5am to 10 pm. Morning aarti is at 4am and night aarti at 9pm.</p>
+        <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.6673077501437!2d82.99708421496355!3d25.281774733856967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31f3fa422ad9%3A0xe0b30826c9d157e1!2sSankatmochan%20Temple!5e0!3m2!1sen!2sin!4v1638906262943!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <div class="temple3" id="t">
+    <h2><u>KAAL BHAIRAV MANDIR</u></h2>
+    
+    <video controls loop width="620" height="340">
+      <source src="kaa.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+    <p style="font-size: 150%;">Kaal Bhairav Mandir is one of the oldest Shiva temples in Varanasi, India. Situated in Bharonath, Vishweshwarganj, this temple has great historical and cultural importance in Hinduism; especially amongst the locals.
+
+        Bhairav is one of the Avatars of Shiva. Bhairav is Eleventh Rudra Avatars and has  Eight Manifestations.</p>
+        <p style="font-size: 150%;">There is an end number of Kaal Bhairav Mandir available across India but Kaal Bhairav Mandir in Varanasi is the most powerful and oldest one. Kaal Bhairav Mandir is located in Visheshar Ganj in Varanasi. Temple door open in Morning 5 am after Vishesh Aarti and close at 9.30 evening. during the day the end number of people visit mostly Sunday and Tuesday is full of crowds.</p>
+        <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.5661695828985!2d83.01065611496428!3d25.318775883839713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2fad76b0e987%3A0x16ae86208f2db605!2sKaal%20Bhairav%20Mandir!5e0!3m2!1sen!2sin!4v1638906935007!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="temple4" id="t">
+        <h2><u>TULSI MANAS MANDIR</u></h2>
+        
+    <video controls loop width="620" height="340">
+      <source src="tul.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+        <p style="font-size: 150%;">Shri Tulsi Manas Mandir is located at Sapt Sarover, Bhoapatwal road in Haridwar. Tulsi Manas Mandir is one of the famous temples of Haridwar. The Temple was constructed by Swami Shri Arjun Puri Ji Maharaj. Sri Tulsi Manas mandir is made up of the white marble and looks very attractive and has a beautiful garden. The Temple is dedicated to Lord Ram. Inside the temple, you can explore the beautiful statue of Ram, Sita, Lakshman, and Hanuman. In Manas Mandir, the other side of you could also visit the beautiful Lord Shiva Shivling which is worshiped every day.</p>
+        <p style="font-size: 150%;">The main attraction of this temple is the wall of the temple which shows the various scenes from the Ramacharitmanas. Overall the temple entrance and beauty of the temple are amazing and your heart will push you to see the temple.</p>
+        <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.4170443998214!2d82.9943305149637!3d25.29018868385304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31f1d3d9b2b7%3A0x47ac93ef57966b2e!2sTulsi%20manas%20mandir!5e0!3m2!1sen!2sin!4v1638907657703!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+      <div class="temple5">
+        <h2><u>ANNUPURNA DEVI MANDIR</u></h2>
+        
+    <video controls loop width="620" height="340">
+      <source src="ann.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+        <p style="font-size: 150%;">The temple of Mata Annapurna in Kashi is such that if the devotee keeps the lavas and coins found in the treasury in his house with full devotion, then the blessings of Mata Annapurna remains in her house. In this temple, on the day of Dhanteras, the offerings of native and foreign devotees' mother Annapurna are kept in line for hours to collect the treasure.</p>
+        <p style="font-size: 150%;"> The temple of Mata Annapurna where devotees get the treasure of the year-long prosperity and prosperity. This temple opens only on the day of Dhanteras.</p>
+        <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.813697828246!2d83.00790221496413!3d25.310462683843642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2e1e630cf9e1%3A0xabb3ab6c2238966e!2sShree%20Annapurna%20Mandir!5e0!3m2!1sen!2sin!4v1638907917703!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+     <div class="temple5" id="t">
+    <h2><u>DURGA KUND</u></h2>
+    
+    <video controls loop width="620" height="340">
+      <source src="kan.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+    <p style="font-size: 150%;">The Devi Purana describes 51 major Shakti Peethas of Mother Shakti. According to mythology, Shakti Peethas were constructed wherever the body parts and ornaments of Mother Sati fell.
+
+        It is believed that these places themselves have the effect of the energy of mother power, where the wishes of all the devotees are fulfilled.</p>
+ 
+        <p style="font-size: 150%;">On the right side of the Durga temple, a rectangular tank of water known as Durga Kund (Kund means pond or pool). Perfect time to visit the temple: Anytime in the year from 7:00 am to 8:00 pm.</p>
+        <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28860.690712914173!2d82.97431468070333!3d25.28449721674521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e31f3f093b001%3A0x92809e3331040897!2sShri%20Durga%20Temple!5e0!3m2!1sen!2sin!4v1638908714778!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+     <div class="temple6" id="t">
+     <h2><u>LALITA GAURI MANDIR</u></h2>
+     
+    <video controls loop width="620" height="340">
+      <source src="lal.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+     <p style="font-size: 150%;">Lalita Gauri Mandir (Hindi: ललिता गौरी मंदिर), also known as Lalita Mata Mandir, is one of the important and historic temples in the holy city of Varanasi. This temple has great religious importance in Hinduism and is dedicated to the goddess Lalita Gauri (form of Goddess Parvati). </p>
+    <p style="font-size: 150%;">Timings: 4.30 am to 1.00 pm, 4.00 pm to 9.00pm<br>
+        Aarti Timings : Mangala Arati : 04.30 am, Dhoop Aarti : 07.15 am, Raj Bhog Arati : 12.30 pm, Usthapana Arati : 04:15 pm, Sandhya Arati : 07:00 pm, Sayana Arati : 08:30 pm.</p> 
+    <h3>Location:</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.834915169782!2d83.01100131496409!3d25.309749983843865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2f324e0cfd77%3A0x803394a2edc6ad09!2sLalita%20Gauri%20Mandir!5e0!3m2!1sen!2sin!4v1638909115195!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+      <div class="temple7">
+        <h2><u>SHRI KASHI VISHWANATH TEMPLE(BHU)</u></h2>
+        
+    <video controls loop width="620" height="340">
+      <source src="bh.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+        <p style="font-size: 150%;">The new Baba Vishwanath Temple in Varanasi is also know as Birla Temple which is the main attraction in Varanasi city. This temple dedicated to god Shiva and its located inside the BHU (Banaras Hindu University), another landmark in the Varanasi. Possessing the tallest temple tower in the world, this temple has a grand view even from a distance. The old Shri Kashi Vishwanath Temple was time and again reconstructed mainly by Muslim rulers.</p>
+    <p style="font-size: 150%;">It is in the year 1930s that Pandit Madan Mohan Malviya thought of making a replica of the old Shri Kashi Vishwanath Temple on the university campus. Thus, the construction of the new temple was undertaken and started by the Birla family in 1931, and it was completed in 1966. 77 meters high, temples mostly made with marble. Although the main deity in this temple is Lord Shiva, there are other gods and goddesses worshiped here. There are nine temples within one temple, and walls of this temple are designed with illustrations of extracts from sacred Hindu scriptures.</p>
+    <h3>Location:</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.1339133632146!2d82.9857187149632!3d25.266080283864213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e32294d57e89d%3A0x54126af7dd1d3d05!2sShri%20Kashi%20Vishwanath%20Temple%20BHU!5e0!3m2!1sen!2sin!4v1638909371825!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+    <div class="temple8" id="t">
+        <h2><u>SARNATH MANDIR</u></h2>
+        
+    <video controls loop width="620" height="340">
+      <source src="sa.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+
+        <p style="font-size: 150%;">Sarnath is the place where Gathama Buddha gave his first sermon. So, it holds special significance as an important Buddhist pilgrimage center. It is considered to be one among the four holy places that a Buddhist pilgrim must visit. Located 13 kilometers away from Varanasi, Uttar Pradesh is also variously known as Sarnath, Mrigadava, Migadaya, Rishipattana and Isipatana.
+        </p>
+        <p style="font-size: 150%;">It is here that Lord Buddha set his first Dharma chakra or wheel of Dharma into motion and is also the place where the Buddhist Sangha came into existence. Sarnath is also famous for India’s tallest Buddha statue with a height of 80 feet, built in an area of 2.5 acres and with a little more than 800 stones. It is also a very important pilgrimage destination for the Jain as, Singpur, a village a little away from Sarnath, is the birth place of the eleventh Jain Tirthankar Shreyansanath. There is a temple dedicated to him.</p>
+        <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.1339133632146!2d82.9857187149632!3d25.266080283864213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e32294d57e89d%3A0x54126af7dd1d3d05!2sShri%20Kashi%20Vishwanath%20Temple%20BHU!5e0!3m2!1sen!2sin!4v1638909371825!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="temple9" id="t">
+        <h2><u>BHARAT MATA MANDIR</u></h2>
+        
+    <video controls loop width="620" height="340">
+      <source src="bha.mp4" type="video/mp4" autoplay ALIGN="right">
+    </video>
+        <p style="font-size: 150%;">This temple, established in the year 1936, has become a 'temple of reverence' for innumerable Indians of various religions due to its specialties. The Indians buried under the British envisaged this grand and unique temple and it was built by the Rashtravratna Shivprasad Gupt, the nobleman of Kashi, at a cost of about 10 lakh rupees.</p>
+        <h3>Location:</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.612833326819!2d82.98710231496423!3d25.317208883840504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2dfca37c5b4f%3A0x8c660c7cc61a3955!2sBharat%20Mata%20Temple!5e0!3m2!1sen!2sin!4v1638910129260!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <footer class="footer">
+      <div class="inner-footer">
+        <div class="social-links">
+          <ul>
+            <li class="social-items"><a href="https://m.facebook.com/104571722076653/" target="blank"><i
+                  class="fab fa-facebook"></i></a></li>
+            <li class="social-items"><a href="https://twitter.com/TravelVaranasi?t=kGUeXzdr3YJGnl6yjNmULA&s=08"
+                target="blank"><i class="fab fa-twitter"></i></a></li>
+            <li class="social-items"><a href="https://instagram.com/kashi_the_luminous_city/" target="blank"><i
+                  class="fab fa-instagram"></i></a></li>
+            <li class="social-items"><a href="https://youtube.com/channel/UCE41_7ZSlgA_ZO7W9AR0Uiw"><i
+                  class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="quick-links">
+          <ul>
+            <li class="quick-items"><a href="#home">Home</a></li>
+            <li class="quick-items"><a href="#services-container">Featuring</a></li>
+            <li class="quick-items"><a href="#about Us">About Us</a></li>
+            <li class="quick-items"><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+  
+      </div>
+      <div class="outer-footer">
+        | Copyright &copy; TTB !!! All Right Reserved |
+      </div>
+    </footer>
+    </body>
+    </html>
+    
